@@ -16,8 +16,8 @@ h1{margin:0 0 4px}h2{font-size:16px;margin:0 0 10px;color:var(--a)}.m{color:var(
 const D=window.CLIMA,$=s=>document.getElementById(s),v=(x,u="")=>x==null?"—":x+u;
 const tile=(a,b)=>`<div class="d"><div class="m">${a}</div><b>${b}</b></div>`;
 if(!D)$("app").textContent="Ejecuta: npm run scrape";else{
-$("u").textContent="Clima en "+D.ubicacion;$("up").textContent="Actualizado: "+new Date(D.actualizado).toLocaleString("es-MX")+" · Fuente: Meteored";
-const a=D.actual,s=D.sol,k=D.climaMes;
+$("u").textContent="Clima en "+D.ubicacion;$("up").textContent="Actualizado: "+new Date(D.actualizado).toLocaleString("es-MX")+" · Fuente: Open-Meteo";
+const a=D.actual,s=D.sol||{},k=D.climaMes;
 $("app").innerHTML=`
 <div class="card"><div class="big">${v(a.temp,"°")}</div><div>${v(a.condicion)} · Sensación ${v(a.sensacion,"°")}</div>
 <div class="m">Viento ${a.viento?`${a.viento.dir} ${a.viento.min}-${a.viento.max} km/h`:"—"}</div><p>${D.resumen.hoy||""}</p></div>
@@ -25,7 +25,7 @@ $("app").innerHTML=`
 <div class="card"><h2>Por hora</h2><div class="sc"><table><tr><th>Hora</th><th>Temp</th><th>Sens.</th><th>Condición</th><th>Lluvia</th><th>Hum.</th><th>Rocío</th><th>Nub.</th><th>Vis.</th><th>Viento</th><th>Rachas</th><th>Presión</th><th>UV</th><th>Cota nieve</th></tr>
 ${D.horas.map(h=>`<tr><td>${h.hora}</td><td>${h.temp}°</td><td>${h.sensacion}°</td><td>${h.condicion}</td><td>${v(h.probLluvia,"%")} ${v(h.lluviaMm," mm")}</td><td>${v(h.humedad,"%")}</td><td>${v(h.puntoRocio,"°")}</td><td>${v(h.nubosidad,"%")}</td><td>${v(h.visibilidadKm," km")}</td><td>${h.viento?h.viento.dir+" "+h.viento.min+"-"+h.viento.max:"—"}</td><td>${v(h.rachas," km/h")}</td><td>${v(h.presion," hPa")}</td><td>${h.uv?h.uv.indice+" "+h.uv.nivel:"—"}</td><td>${v(h.cotaNieve," m")}</td></tr>`).join("")}</table></div></div>
 <div class="card"><h2>Sol y aire</h2><div class="g">${tile("Salida",v(s.salida))}${tile("Puesta",v(s.puesta))}${tile("Primera luz",v(s.primeraLuz))}${tile("Mediodía",v(s.mediodia))}${tile("Última luz",v(s.ultimaLuz))}${tile("Duración",v(s.duracion))}${tile("Luz restante",v(s.restante))}${D.aire?tile("Calidad del aire",`${D.aire.indice} ${D.aire.nivel}<br><span class="m">${D.aire.contaminante} ${D.aire.ugm3} µg/m³</span>`):""}</div></div>
-<div class="card"><h2>Promedio de ${v(k.mes)}</h2><div class="g">${tile("T. media",v(k.tMedia,"°C"))}${tile("Máx.",v(k.max,"°C"))}${tile("Mín.",v(k.min,"°C"))}${tile("Días de lluvia",v(k.diasLluvia))}${tile("Lluvia acum.",v(k.lluviaAcum," mm"))}${tile("Viento medio",v(k.vientoMedio," km/h"))}</div></div>
+${k?`<div class="card"><h2>Climatología mensual</h2><div class="g">${tile("T. media",v(k.tMedia,"°C"))}${tile("Máx.",v(k.max,"°C"))}${tile("Mín.",v(k.min,"°C"))}</div></div>`:""}
 <div class="card"><h2>Luna</h2><div class="g">${D.luna.map(l=>tile("Día "+l.dia,v(l.fase))).join("")}</div></div>
-<div class="card"><h2>Otras ciudades</h2><div class="g">${D.ciudades.map(c=>tile(`<a style="color:inherit" href="${c.url}">${c.ciudad}</a>`,`${c.max}° / ${c.min}°<br><span class="m">${v(c.condicion)}</span>`)).join("")}</div></div>`}
+<div class="card"><h2>Otras ciudades</h2><div class="g">${D.ciudades.map(c=>tile(`<a style="color:inherit" href="${c.url}">${c.ciudad}</a>`,`${c.max}° / ${c.min}°<br><span class="m">${v(c.condicion)}</span>`)).join("")}</div><div class="card"><h2>Mapa interactivo de viento</h2><a href="mapa-viento.html" style="display:block;color:inherit;text-decoration:none"><iframe title="Vista previa del mapa de viento" loading="lazy" style="width:100%;height:320px;border:0;border-radius:10px;pointer-events:none" src="https://embed.windy.com/embed2.html?lat=19.2&lon=-96.14&detailLat=19.2&detailLon=-96.14&width=650&height=320&zoom=7&level=surface&overlay=wind&product=ecmwf&menu=&message=true&marker=true&calendar=now&pressure=true&type=map&location=coordinates&metricWind=km%2Fh&metricTemp=%C2%B0C"></iframe><p>Explorar mapa de viento en pantalla completa ↗</p></a></div></div>`}
 </script></body></html>
