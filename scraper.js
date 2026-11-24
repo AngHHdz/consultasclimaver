@@ -88,7 +88,7 @@ const hhmm = value => value ? value.slice(11,16) : null;
 const duration = sunrise && sunset ? Math.round((new Date(sunset)-new Date(sunrise))/60000) : null;
 const fmtDuration = mins => mins==null ? null : `${Math.floor(mins/60)}h ${mins%60}m`;
 const current = {
-  hora:c.time?.slice(11,16), condicion:codeText(c.weather_code),
+  hora:c.time?.slice(11,16), observacion:c.time || null, condicion:codeText(c.weather_code),
   temp:c.temperature_2m, sensacion:c.apparent_temperature,
   humedad:c.relative_humidity_2m, presion:c.pressure_msl,
   viento:{dir:direction(c.wind_direction_10m),min:c.wind_speed_10m,max:c.wind_gusts_10m},
@@ -108,7 +108,7 @@ if (airRaw?.hourly) {
 }
 const data = {
   fuente:"Open-Meteo", fuenteUrl:"https://open-meteo.com/",
-  actualizado:new Date().toISOString(), ubicacion:"Veracruz, Veracruz, México",
+  actualizado:new Date().toISOString(), consultado:new Date().toISOString(), ubicacion:"Veracruz, Veracruz, México",
   coordenadas:{latitud:LAT,longitud:LON}, zonaHoraria:TZ, unidades:"°C · km/h · mm",
   actual:current, dias, horas,
   sol:{salida:hhmm(sunrise),puesta:hhmm(sunset),duracion:fmtDuration(duration),
