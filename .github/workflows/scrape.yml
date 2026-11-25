@@ -2,6 +2,10 @@ name: Scrape clima
 on:
   schedule: [{ cron: "*/30 * * * *" }]
   workflow_dispatch:
+  push:
+    paths:
+      - "scraper.js"
+      - ".github/workflows/scrape.yml"
 permissions:
   contents: write
 jobs:
