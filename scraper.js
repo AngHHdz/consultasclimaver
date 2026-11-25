@@ -25,8 +25,38 @@ const params = new URLSearchParams({
   wind_speed_unit: "kmh", temperature_unit: "celsius", precipitation_unit: "mm"
 });
 const url = `${BASE}?${params}`;
-const response = await fetch(url, { headers: { "User-Agent": "CLIMAPUERTO/1.0 (weather dashboard)" } });
-if (!response.ok) throw new Error(`Open-Meteo forecast HTTP ${response.status}`);
+
+async function fetchWithRetry(resource, options = {}, { attempts = 3, timeoutMs = 30000, label = "API" } = {}) {
+  let lastError;
+  for (let attempt = 1; attempt <= attempts; attempt++) {
+    try {
+      const response = await fetch(resource, {
+        ...options,
+        signal: AbortSignal.timeout(timeoutMs)
+      });
+      if (response.ok) return response;
+      const error = new Error(`${label} HTTP ${response.status}`);
+      if (response.status < 500 && response.status !== 429) throw error;
+      lastError = error;
+    } catch (error) {
+      lastError = error;
+      if (error.name !== "TimeoutError" && error.name !== "AbortError" &&
+          !/fetch failed|ConnectTimeoutError|ECONNRESET|ETIMEDOUT|HTTP 429|HTTP 5\d\d/i.test(error.message)) {
+        throw error;
+      }
+    }
+    if (attempt < attempts) {
+      const waitMs = attempt * 3000;
+      console.warn(`${label}: intento ${attempt}/${attempts} falló (${lastError.message}). Reintentando en ${waitMs/1000}s…`);
+      await new Promise(resolve => setTimeout(resolve, waitMs));
+    }
+  }
+  throw new Error(`${label}: no respondió después de ${attempts} intentos. Último error: ${lastError?.message || "desconocido"}`);
+}
+
+const response = await fetchWithRetry(url, {
+  headers: { "User-Agent": "CLIMAPUERTO/1.0 (weather dashboard)" }
+}, { attempts: 3, timeoutMs: 30000, label: "Open-Meteo forecast" });
 const raw = await response.json();
 if (raw.error || !raw.current || !raw.hourly || !raw.daily) throw new Error(raw.reason || "Open-Meteo devolvió datos incompletos.");
 
@@ -37,10 +67,12 @@ airUrl.search = new URLSearchParams({
 });
 let airRaw = null;
 try {
-  const ar = await fetch(airUrl);
-  if (ar.ok) airRaw = await ar.json();
+  const ar = await fetchWithRetry(airUrl, {}, {
+    attempts: 2, timeoutMs: 20000, label: "Open-Meteo air quality"
+  });
+  airRaw = await ar.json();
 } catch (error) {
-  console.warn("Air-quality endpoint unavailable:", error.message);
+  console.warn("Air-quality endpoint unavailable; continuing without it:", error.message);
 }
 const codeText = code => ({
   0:"Despejado",1:"Principalmente despejado",2:"Nubes y claros",3:"Nublado",
