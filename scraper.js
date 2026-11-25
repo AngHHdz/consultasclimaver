@@ -150,5 +150,82 @@ const data = {
   luna:[], ciudades:[]
 };
 fs.writeFileSync("data.json",JSON.stringify(data,null,2)+"\n");
-fs.writeFileSync("data.js","window.CLIMA="+JSON.stringify(data)+";\n");
+fs.writeFileSync("data.js","window.CLIMA="+JSON.stringify(data)+";\\n");
+
+const BITACORA_URL = "https://www.mediport.com.mx/tableroOperativo/TablerosPublicos/bitacoraBahiaPublica.aspx";
+const bitacoraPath = "bitacora.json";
+const cleanCell = html => html
+  .replace(/<br\\s*\\/?\\s*>/gi," ")
+  .replace(/<[^>]*>/g," ")
+  .replace(/&nbsp;|&#160;/gi," ")
+  .replace(/&amp;/gi,"&").replace(/&quot;/gi,'"').replace(/&#39;|&apos;/gi,"'")
+  .replace(/&lt;/gi,"<").replace(/&gt;/gi,">")
+  .replace(/\\s+/g," ").trim();
+const norm = value => cleanCell(String(value||"")).normalize("NFD").replace(/[\\u0300-\\u036f]/g,"").toLowerCase();
+function parseBitacora(html) {
+  const rows=[...html.matchAll(/<tr\\b[^>]*>([\\s\\S]*?)<\\/tr>/gi)].map(m=>({
+    cells:[...m[1].matchAll(/<t[dh]\\b[^>]*>([\\s\\S]*?)<\\/t[dh]>/gi)].map(x=>cleanCell(x[1]))
+  })).filter(r=>r.cells.length);
+  let headerIndex=-1,headers=[];
+  for(let i=0;i<Math.min(rows.length,20);i++){
+    const candidate=rows[i].cells.map(norm);
+    if(candidate.some(x=>/bahia|bahía/.test(x)) && candidate.some(x=>/evento|movimiento|operacion|operación|estatus|tipo/.test(x))){
+      headerIndex=i;headers=candidate;break;
+    }
+  }
+  const findCol=patterns=>headers.findIndex(h=>patterns.some(p=>p.test(h)));
+  const bayCol=findCol([/bahia/]),dateCol=findCol([/fecha/]),timeCol=findCol([/hora/]);
+  const eventCol=findCol([/evento/,/movimiento/,/operacion/,/estatus/,/^tipo$/]);
+  const reasonCol=findCol([/motivo/,/causa/,/observacion/,/comentario/]);
+  const output={bahiaNorte:[],bahiaSur:[]};
+  const dataRows=rows.slice(headerIndex>=0?headerIndex+1:0);
+  for(const row of dataRows){
+    const cells=row.cells, joined=norm(cells.join(" | "));
+    const bayValue=bayCol>=0?norm(cells[bayCol]):joined;
+    const bay=/bahia\\s*norte/.test(bayValue) || /bahia\\s*norte/.test(joined)?"Norte":
+      (/bahia\\s*sur/.test(bayValue)||/bahia\\s*sur/.test(joined)?"Sur":null);
+    if(!bay)continue;
+    const date=dateCol>=0?cells[dateCol]:"";
+    const time=timeCol>=0?cells[timeCol]:"";
+    const event=eventCol>=0?cells[eventCol]:"";
+    const reason=reasonCol>=0?cells[reasonCol]:"";
+    const ignored=new Set([bayCol,dateCol,timeCol,eventCol,reasonCol].filter(x=>x>=0));
+    const extras=cells.filter((_,i)=>!ignored.has(i)&&cells[i]).join(" · ");
+    const movement={
+      fecha:date||((cells.join(" ").match(/\\b\\d{1,2}[\\/-]\\d{1,2}[\\/-]\\d{2,4}\\b/)||[])[0]||""),
+      hora:time||((cells.join(" ").match(/\\b\\d{1,2}:\\d{2}(?::\\d{2})?\\s*(?:a\\.?m\\.?|p\\.?m\\.?)?\\b/i)||[])[0]||""),
+      evento:event||"Movimiento registrado",
+      motivo:reason||extras
+    };
+    if(!movement.fecha&&!movement.hora&&!movement.motivo&&movement.evento==="Movimiento registrado")continue;
+    output[bay==="Norte"?"bahiaNorte":"bahiaSur"].push(movement);
+  }
+  const parseDate=m=>{const raw=(m.fecha+" "+m.hora).trim();const parts=raw.match(/(\\d{1,2})[\\/-](\\d{1,2})[\\/-](\\d{2,4})/);if(!parts)return 0;let year=Number(parts[3]);if(year<100)year+=2000;return new Date(year,Number(parts[2])-1,Number(parts[1])).getTime()||0;};
+  for(const key of ["bahiaNorte","bahiaSur"]) output[key]=output[key].sort((a,b)=>parseDate(b)-parseDate(a)).slice(0,3);
+  return output;
+}
+let bitacora={fuente:BITACORA_URL,actualizado:null,consultado:new Date().toISOString(),disponible:false,obsoleta:false,bahiaNorte:[],bahiaSur:[]};
+try{
+  const previous=fs.existsSync(bitacoraPath)?JSON.parse(fs.readFileSync(bitacoraPath,"utf8")):null;
+  const page=await fetchWithRetry(BITACORA_URL,{headers:{"User-Agent":"Mozilla/5.0 CLIMAPUERTO/1.0","Accept":"text/html,application/xhtml+xml"}},{attempts:2,timeoutMs:25000,label:"Mediport bitácora"});
+  const html=await page.text();
+  const parsed=parseBitacora(html);
+  const count=parsed.bahiaNorte.length+parsed.bahiaSur.length;
+  if(count){
+    bitacora={fuente:BITACORA_URL,actualizado:new Date().toISOString(),consultado:new Date().toISOString(),disponible:true,obsoleta:false,...parsed};
+    console.log(`OK Mediport bitácora: ${parsed.bahiaNorte.length} movimientos Bahía Norte, ${parsed.bahiaSur.length} Bahía Sur.`);
+  }else if(previous){
+    bitacora={...previous,consultado:new Date().toISOString(),disponible:false,obsoleta:true,error:"Mediport respondió, pero no se reconoció la estructura de la tabla."};
+    console.warn("Mediport bitácora: no se reconocieron filas; se conserva la última lectura marcada como obsoleta.");
+  }else{
+    bitacora={...bitacora,error:"No se reconocieron registros en la tabla pública de Mediport."};
+    console.warn(bitacora.error);
+  }
+}catch(error){
+  const previous=fs.existsSync(bitacoraPath)?JSON.parse(fs.readFileSync(bitacoraPath,"utf8")):null;
+  bitacora=previous?{...previous,consultado:new Date().toISOString(),disponible:false,obsoleta:true,error:error.message}:{...bitacora,error:error.message};
+  console.warn("Mediport bitácora no disponible; la actualización meteorológica continúa:",error.message);
+}
+fs.writeFileSync(bitacoraPath,JSON.stringify(bitacora,null,2)+"\\n");
+
 console.log(`OK Open-Meteo: ${dias.length} días, ${hours.length} horas; calidad del aire ${aire?"disponible":"no disponible"}.`);
