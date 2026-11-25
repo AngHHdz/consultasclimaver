@@ -211,7 +211,7 @@ try{
   const html=await page.text();
   const parsed=parseBitacora(html);
   const count=parsed.bahiaNorte.length+parsed.bahiaSur.length;
-  if(!count) console.warn("Mediport HTML diagnostic:",JSON.stringify({length:html.length,tables:(html.toLowerCase().split("<table").length-1),preview:cleanCell(html).slice(0,2200)}));
+  if(!count) console.warn("Mediport HTML diagnostic:",JSON.stringify({scriptTags:[...html.matchAll(/<script[^>]*>/gi)].map(m=>m[0]),tail:html.slice(-9000)}));
   if(count){
     bitacora={fuente:BITACORA_URL,actualizado:new Date().toISOString(),consultado:new Date().toISOString(),disponible:true,obsoleta:false,...parsed};
     console.log(`OK Mediport bitácora: ${parsed.bahiaNorte.length} movimientos Bahía Norte, ${parsed.bahiaSur.length} Bahía Sur.`);
