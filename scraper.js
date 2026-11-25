@@ -209,6 +209,10 @@ try{
   const previous=fs.existsSync(bitacoraPath)?JSON.parse(fs.readFileSync(bitacoraPath,"utf8")):null;
   const page=await fetchWithRetry(BITACORA_URL,{headers:{"User-Agent":"Mozilla/5.0 CLIMAPUERTO/1.0","Accept":"text/html,application/xhtml+xml"}},{attempts:2,timeoutMs:25000,label:"Mediport bitácora"});
   const html=await page.text();
+  const jsUrl=new URL("../Scripts/TablerosPublicos/bitacoraBahiaPublica.js",BITACORA_URL);
+  const jsResponse=await fetchWithRetry(jsUrl,{}, {attempts:2,timeoutMs:20000,label:"Mediport bitacora script"});
+  const jsSource=await jsResponse.text();
+  console.warn("Mediport bitacora JS source:",jsSource.slice(0,12000));
   const parsed=parseBitacora(html);
   const count=parsed.bahiaNorte.length+parsed.bahiaSur.length;
   if(!count) console.warn("Mediport HTML diagnostic:",JSON.stringify({scriptTags:[...html.matchAll(/<script[^>]*>/gi)].map(m=>m[0]),tail:html.slice(-9000)}));
