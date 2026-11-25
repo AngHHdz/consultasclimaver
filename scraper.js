@@ -142,7 +142,7 @@ const data = {
   fuente:"Open-Meteo", fuenteUrl:"https://open-meteo.com/",
   actualizado:new Date().toISOString(), consultado:new Date().toISOString(), ubicacion:"Veracruz, Veracruz, México",
   coordenadas:{latitud:LAT,longitud:LON}, zonaHoraria:TZ, unidades:"°C · km/h · mm",
-  actual:current, dias, horas,
+  actual:current, dias, horas:hours,
   sol:{salida:hhmm(sunrise),puesta:hhmm(sunset),duracion:fmtDuration(duration),
     primeraLuz:null,mediodia:null,ultimaLuz:null,restante:null},
   aire, climaMes:null,
