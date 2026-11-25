@@ -175,6 +175,7 @@ try{
   },{attempts:3,timeoutMs:25000,label:"Mediport bitácora API"});
   const payload=await responseLog.json();
   const records=payload?.d?.datos;
+  if(Array.isArray(records))console.log("Mediport records sample:",JSON.stringify(records.slice(0,12)));
   if(Number(payload?.d?.estado)!==1||!Array.isArray(records))throw new Error(payload?.d?.mensaje||"La API pública de Mediport no devolvió registros válidos.");
   const parsed={bahiaNorte:[],bahiaSur:[]};
   for(const row of records){
