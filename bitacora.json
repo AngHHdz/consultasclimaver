@@ -1,0 +1,10 @@
+{
+  "fuente": "https://www.mediport.com.mx/tableroOperativo/TablerosPublicos/bitacoraBahiaPublica.aspx",
+  "actualizado": null,
+  "consultado": "2026-11-25T16:27:05.398Z",
+  "disponible": false,
+  "obsoleta": false,
+  "bahiaNorte": [],
+  "bahiaSur": [],
+  "error": "No se reconocieron registros en la tabla pública de Mediport."
+}
