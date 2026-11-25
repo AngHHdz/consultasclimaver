@@ -1,10 +1,10 @@
 {
   "fuente": "https://www.mediport.com.mx/tableroOperativo/TablerosPublicos/bitacoraBahiaPublica.aspx",
-  "actualizado": null,
-  "consultado": "2026-11-25T16:29:19.564Z",
-  "disponible": false,
-  "obsoleta": true,
+  "actualizado": "2026-11-25T16:30:00.597Z",
+  "consultado": "2026-11-25T16:30:00.597Z",
+  "disponible": true,
+  "obsoleta": false,
+  "totalRegistros": 79,
   "bahiaNorte": [],
-  "bahiaSur": [],
-  "error": "Mediport respondió, pero no se reconoció la estructura de la tabla."
-}
+  "bahiaSur": []
+}\n
