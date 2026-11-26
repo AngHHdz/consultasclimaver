@@ -250,4 +250,42 @@ bitacora.fuenteEstado=calt.disponible?"CALT":"Mediport";
 
 fs.writeFileSync(bitacoraPath,JSON.stringify(bitacora,null,2)+"\n");
 
+/* Buques de automóviles atracados: listado público de MEDI-PORT / ASIPONA Veracruz. */
+const AUTOS_URL="https://www.mediport.com.mx/mediportV2/Reportes/BuquesAtracados.aspx";
+const decodeHtml=value=>String(value||"")
+  .replace(/&nbsp;|&#160;/gi," ")
+  .replace(/&amp;/gi,"&").replace(/&quot;/gi,'"').replace(/&#39;|&apos;/gi,"'")
+  .replace(/&lt;/gi,"<").replace(/&gt;/gi,">")
+  .replace(/&#(\d+);/g,(_,n)=>String.fromCharCode(Number(n)))
+  .replace(/&([a-z]+);/gi,(_,n)=>({aacute:"á",eacute:"é",iacute:"í",oacute:"ó",uacute:"ú",ntilde:"ñ",Aacute:"Á",Eacute:"É",Iacute:"Í",Oacute:"Ó",Uacute:"Ú",Ntilde:"Ñ"}[n]||""));
+const cleanCell=value=>decodeHtml(String(value||"").replace(/<[^>]*>/g," ")).replace(/\s+/g," ").trim();
+let buquesAutos={fuente:AUTOS_URL,consultado:new Date().toISOString(),actualizado:null,disponible:false,total:0,buques:[]};
+try{
+ const r=await fetchWithRetry(AUTOS_URL,{headers:{"User-Agent":"Mozilla/5.0 (compatible; CLIMAPUERTO/1.0)","Accept":"text/html"}},{attempts:3,timeoutMs:30000,label:"MEDI-PORT buques atracados"});
+ const html=await r.text();
+ const rows=[...html.matchAll(/<tr\b[^>]*>([\s\S]*?)<\/tr>/gi)].map(m=>[...m[1].matchAll(/<t[dh]\b[^>]*>([\s\S]*?)<\/t[dh]>/gi)].map(c=>cleanCell(c[1]))).filter(row=>row.length>=10);
+ const headerIndex=rows.findIndex(row=>row.some(cell=>/viaje/i.test(cell))&&row.some(cell=>/buque/i.test(cell)));
+ if(headerIndex<0)throw new Error("No se identificó la tabla de buques en MEDI-PORT.");
+ const headers=rows[headerIndex].map(x=>x.toLocaleLowerCase("es-MX"));
+ const col=pattern=>headers.findIndex(x=>pattern.test(x));
+ const idx={viaje:col(/viaje/),registro:col(/registro/),buque:col(/buque/),muelle:col(/muelle/),pais:col(/pa[ií]s/),agencia:col(/agencia/),fecha:col(/^fecha/),trb:col(/^trb/),maniobrista:col(/maniobrista/),carga:col(/descripci[oó]n.*carga|carga/)};
+ const get=(row,key)=>idx[key]>=0?row[idx[key]]||"": "";
+ const autos=rows.slice(headerIndex+1).filter(row=>/autom[oó]viles|automobiles|ro[- ]?ro/i.test(get(row,"carga"))).map(row=>({
+   viaje:get(row,"viaje"),registroAduana:get(row,"registro"),buque:get(row,"buque"),
+   muelle:get(row,"muelle"),pais:get(row,"pais"),agencia:get(row,"agencia"),
+   fecha:get(row,"fecha"),trb:get(row,"trb"),maniobrista:get(row,"maniobrista"),
+   descripcionCarga:get(row,"carga")
+ })).filter(x=>x.buque);
+ buquesAutos={fuente:AUTOS_URL,consultado:new Date().toISOString(),actualizado:new Date().toISOString(),disponible:true,total:autos.length,buques:autos};
+ console.log("OK MEDI-PORT buques de automóviles: "+autos.length+" registro(s).");
+}catch(error){
+ console.warn("MEDI-PORT buques de automóviles no disponible:",error.message);
+ try{
+   const previous=JSON.parse(fs.readFileSync("buques-autos.json","utf8"));
+   buquesAutos={...previous,consultado:new Date().toISOString(),disponible:false,error:error.message};
+ }catch{buquesAutos={...buquesAutos,error:error.message};}
+}
+fs.writeFileSync("buques-autos.json",JSON.stringify(buquesAutos,null,2)+"\n");
+
+
 console.log(`OK Open-Meteo: ${dias.length} días, ${hours.length} horas; calidad del aire ${aire?"disponible":"no disponible"}.`);
