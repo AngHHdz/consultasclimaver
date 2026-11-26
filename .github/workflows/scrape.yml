@@ -19,5 +19,5 @@ jobs:
       - run: |
           git config user.name "bot"
           git config user.email "bot@users.noreply.github.com"
-          git add data.json data.js bitacora.json
+          git add data.json data.js bitacora.json buques-autos.json
           git diff --cached --quiet || (git commit -m "update clima" && git push)
