@@ -231,7 +231,7 @@ try{
       estado:status.charAt(0).toUpperCase()+status.slice(1).toLowerCase(),
       fecha:String(row.fecha||""),
       hora:String(row.hora||""),
-      actualizado:parseMovementDate({fecha:row.fecha,hora:row.hora})?new Date(parseMovementDate({fecha:row.fecha,hora:row.hora})).toISOString():null
+      actualizado:parseMovementDate({fecha:row.fecha,hora:row.hora})?new Date(parseMovementDate({fecha:row.fecha,hora:row.hora})+6*60*60*1000).toISOString():null
     };
   }
   const expected=["north","south"].flatMap(bay=>["minor","major"].map(type=>calt.estados[bay][type]));
