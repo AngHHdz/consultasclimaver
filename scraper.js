@@ -201,51 +201,52 @@ try{
   console.warn("Mediport bitácora no disponible; la actualización meteorológica continúa:",error.message);
 }
 
-/* Diagnóstico de fuente pública CALT: inspecciona página y recursos embebidos sin asumir estados. */
-const CALT_PAGES=[
-  "https://calt.puertodeveracruz.com.mx/Calt/",
-  "https://calt.puertodeveracruz.com.mx/Calt/Publico/EstadoTerminalesManiobras.aspx"
-];
-const caltDiagnostics=[];
+
+/* CALT: fuente primaria oficial para los cuatro estados de navegación. */
+const CALT_STATUS_URL="https://calt.puertodeveracruz.com.mx/Calt/Publico/EstadoTerminalesManiobras.aspx/obtieneEstadoApi";
+const caltPrevious=bitacora.calt||null;
+let calt={fuente:"https://calt.puertodeveracruz.com.mx/Calt/",endpoint:CALT_STATUS_URL,consultado:new Date().toISOString(),disponible:false,estados:{north:{},south:{}}};
 try{
-  for(const pageUrl of CALT_PAGES){
-    const response=await fetchWithRetry(pageUrl,{
-      headers:{"User-Agent":"Mozilla/5.0 (compatible; CLIMAPUERTO/1.0)","Accept":"text/html,application/xhtml+xml"}
-    },{attempts:2,timeoutMs:20000,label:"CALT "+pageUrl});
-    const html=await response.text();
-    const decode=s=>String(s||"").replace(/&nbsp;|&#160;/gi," ").replace(/&aacute;/gi,"á").replace(/&eacute;/gi,"é").replace(/&iacute;/gi,"í").replace(/&oacute;/gi,"ó").replace(/&uacute;/gi,"ú").replace(/&ntilde;/gi,"ñ").replace(/&amp;/gi,"&").replace(/&#(\d+);/g,(_,n)=>String.fromCharCode(Number(n)));
-    const plain=decode(html.replace(/<script[\s\S]*?<\/script>/gi," ").replace(/<style[\s\S]*?<\/style>/gi," ").replace(/<[^>]+>/g," ").replace(/\s+/g," "));
-    const iframes=[...html.matchAll(/<iframe[^>]+src=["']([^"']+)/gi)].map(m=>new URL(m[1],pageUrl).href);
-    const scripts=[...html.matchAll(/<script[^>]+src=["']([^"']+)/gi)].map(m=>new URL(m[1],pageUrl).href);
-    caltDiagnostics.push({url:pageUrl,status:response.status,title:decode((html.match(/<title[^>]*>([\s\S]*?)<\/title>/i)||[])[1]||""),text:plain.slice(0,9000),iframes,scripts});
+  const responseCalt=await fetchWithRetry(CALT_STATUS_URL,{
+    method:"POST",
+    headers:{
+      "User-Agent":"Mozilla/5.0 (compatible; CLIMAPUERTO/1.0)",
+      "Content-Type":"application/json; charset=utf-8",
+      "Accept":"application/json",
+      "Referer":"https://calt.puertodeveracruz.com.mx/Calt/Publico/EstadoTerminalesManiobras.aspx"
+    },
+    body:"{}"
+  },{attempts:3,timeoutMs:20000,label:"CALT estado de navegación"});
+  const payloadCalt=await responseCalt.json();
+  const rawRows=payloadCalt?.d?.datos?.dmeteo?.datos;
+  const rows=typeof rawRows==="string"?JSON.parse(rawRows):rawRows;
+  if(Number(payloadCalt?.d?.datos?.dmeteo?.codigo_error)!==0||!Array.isArray(rows))throw new Error(payloadCalt?.d?.mensaje||"CALT devolvió datos de navegación inválidos.");
+  for(const row of rows){
+    const label=normBay(row.tipo);
+    const bay=label.includes("bahia sur")?"south":label.includes("bahia norte")?"north":null;
+    const type=label.includes("menor")?"minor":label.includes("mayor")?"major":null;
+    const status=String(row.estado||"").trim();
+    if(!bay||!type||!["abierto","cerrado","parcial"].includes(normBay(status)))continue;
+    calt.estados[bay][type]={
+      estado:status.charAt(0).toUpperCase()+status.slice(1).toLowerCase(),
+      fecha:String(row.fecha||""),
+      hora:String(row.hora||""),
+      actualizado:parseMovementDate({fecha:row.fecha,hora:row.hora})?new Date(parseMovementDate({fecha:row.fecha,hora:row.hora})).toISOString():null
+    };
   }
+  const expected=["north","south"].flatMap(bay=>["minor","major"].map(type=>calt.estados[bay][type]));
+  if(expected.some(value=>!value))throw new Error("CALT no entregó los cuatro estados de navegación.");
+  const stamps=expected.map(x=>x.actualizado?Date.parse(x.actualizado):0).filter(Boolean);
+  calt.actualizado=stamps.length?new Date(Math.max(...stamps)).toISOString():null;
+  calt.disponible=true;
+  calt.registros=rows.length;
+  console.log("OK CALT navegación: "+JSON.stringify(calt.estados));
 }catch(error){
-  caltDiagnostics.push({error:error.message});
+  calt={...(caltPrevious||{}),fuente:"https://calt.puertodeveracruz.com.mx/Calt/",consultado:new Date().toISOString(),disponible:false,error:error.message,estados:caltPrevious?.estados||{north:{},south:{}}};
+  console.warn("CALT navegación no disponible; se conserva el último dato válido sin marcarlo como actual:",error.message);
 }
-
-/* Inspecciona el JavaScript público que construye el tablero de estados CALT. */
-try{
-  const jsUrl="https://calt.puertodeveracruz.com.mx/Calt/Scripts/Paginas/Default.js";
-  const jr=await fetchWithRetry(jsUrl,{headers:{"User-Agent":"Mozilla/5.0"}},{attempts:2,timeoutMs:20000,label:"CALT Default.js"});
-  const js=await jr.text();
-  const terms=/ajax|\.aspx|\.asmx|webmethod|estado|bahia|navegacion|api|json|url\s*:/i;
-  const lines=js.split(/\r?\n/);
-  console.log("CALT_DEFAULT_JS_SOURCE "+js);
-  const endpoint="https://calt.puertodeveracruz.com.mx/Calt/Publico/EstadoTerminalesManiobras.aspx/obtieneEstadoApi";
-  for(const body of ["{}","null"]){
-    try{
-      const er=await fetchWithRetry(endpoint,{method:"POST",headers:{"User-Agent":"Mozilla/5.0","Content-Type":"application/json; charset=utf-8","Accept":"application/json"},body},{attempts:1,timeoutMs:15000,label:"CALT estado API"});
-      console.log("CALT_API_RESULT "+JSON.stringify({body,status:er.status,contentType:er.headers.get("content-type"),payload:(await er.text()).slice(0,10000)}));
-    }catch(error){console.log("CALT_API_ERROR "+JSON.stringify({body,error:error.message}));}
-  }
-  const pageUrl=CALT_PAGES[1];
-  const pr=await fetchWithRetry(pageUrl,{headers:{"User-Agent":"Mozilla/5.0"}},{attempts:2,timeoutMs:20000,label:"CALT state page inline"});
-  const html=await pr.text();
-  const inline=[...html.matchAll(/<script(?![^>]*src=)[^>]*>([\s\S]*?)<\/script>/gi)].map(m=>m[1]).join("\n");
-  console.log("CALT_INLINE_JS "+JSON.stringify(inline.split(/\r?\n/).map((line,index)=>({line:index+1,text:line.trim()})).filter(x=>terms.test(x.text)).slice(0,180)));
-}catch(error){console.log("CALT_JS_DIAGNOSTIC_ERROR "+error.message);}
-
-console.log("CALT_DIAGNOSTICS "+JSON.stringify(caltDiagnostics));
+bitacora.calt=calt;
+bitacora.fuenteEstado=calt.disponible?"CALT":"Mediport";
 
 fs.writeFileSync(bitacoraPath,JSON.stringify(bitacora,null,2)+"\n");
 
