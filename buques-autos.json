@@ -7,15 +7,14 @@
   "buques": [
     {
       "viaje": "261590",
-      "registroAduana": "1727",
       "buque": "GOODWOOD",
       "muelle": "1 N",
-      "pais": "LIBERIA",
       "agencia": "ROVESA",
       "fecha": "26/11/2026 16:03",
-      "trb": "59516",
       "maniobrista": "CICE/CICE",
-      "descripcionCarga": "AUTOMOVILES"
+      "descripcionCarga": "AUTOMOVILES",
+      "imo": null,
+      "mmsi": null
     }
   ]
 }
