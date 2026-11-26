@@ -1,7 +1,7 @@
 {
   "fuente": "https://www.mediport.com.mx/tableroOperativo/TablerosPublicos/bitacoraBahiaPublica.aspx",
-  "actualizado": "2026-11-26T18:38:53.686Z",
-  "consultado": "2026-11-26T18:38:53.686Z",
+  "actualizado": "2026-11-26T18:39:46.862Z",
+  "consultado": "2026-11-26T18:39:46.862Z",
   "disponible": true,
   "obsoleta": false,
   "totalRegistros": 80,
@@ -48,7 +48,7 @@
   "calt": {
     "fuente": "https://calt.puertodeveracruz.com.mx/Calt/",
     "endpoint": "https://calt.puertodeveracruz.com.mx/Calt/Publico/EstadoTerminalesManiobras.aspx/obtieneEstadoApi",
-    "consultado": "2026-11-26T18:38:53.686Z",
+    "consultado": "2026-11-26T18:39:46.863Z",
     "disponible": true,
     "estados": {
       "north": {
@@ -56,13 +56,13 @@
           "estado": "Cerrado",
           "fecha": "24/11/2026 12:00:00 a. m.",
           "hora": "11:00",
-          "actualizado": "2026-11-24T11:00:00.000Z"
+          "actualizado": "2026-11-24T17:00:00.000Z"
         },
         "major": {
           "estado": "Cerrado",
           "fecha": "24/11/2026 12:00:00 a. m.",
           "hora": "11:00",
-          "actualizado": "2026-11-24T11:00:00.000Z"
+          "actualizado": "2026-11-24T17:00:00.000Z"
         }
       },
       "south": {
@@ -70,17 +70,17 @@
           "estado": "Cerrado",
           "fecha": "24/11/2026 12:00:00 a. m.",
           "hora": "11:00",
-          "actualizado": "2026-11-24T11:00:00.000Z"
+          "actualizado": "2026-11-24T17:00:00.000Z"
         },
         "major": {
           "estado": "Abierto",
           "fecha": "26/11/2026 12:00:00 a. m.",
           "hora": "12:00",
-          "actualizado": "2026-11-26T12:00:00.000Z"
+          "actualizado": "2026-11-26T18:00:00.000Z"
         }
       }
     },
-    "actualizado": "2026-11-26T12:00:00.000Z",
+    "actualizado": "2026-11-26T18:00:00.000Z",
     "registros": 4
   },
   "fuenteEstado": "CALT"
