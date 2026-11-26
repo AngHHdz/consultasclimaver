@@ -271,10 +271,11 @@ try{
  const idx={viaje:col(/viaje/),registro:col(/registro/),buque:col(/buque/),muelle:col(/muelle/),pais:col(/pa[ií]s/),agencia:col(/agencia/),fecha:col(/^fecha/),trb:col(/^trb/),maniobrista:col(/maniobrista/),carga:col(/descripci[oó]n.*carga|carga/)};
  const get=(row,key)=>idx[key]>=0?row[idx[key]]||"": "";
  const autos=rows.slice(headerIndex+1).filter(row=>/autom[oó]viles|automobiles|ro[- ]?ro/i.test(get(row,"carga"))).map(row=>({
-   viaje:get(row,"viaje"),registroAduana:get(row,"registro"),buque:get(row,"buque"),
-   muelle:get(row,"muelle"),pais:get(row,"pais"),agencia:get(row,"agencia"),
-   fecha:get(row,"fecha"),trb:get(row,"trb"),maniobrista:get(row,"maniobrista"),
-   descripcionCarga:get(row,"carga")
+   viaje:get(row,"viaje"),buque:get(row,"buque"),muelle:get(row,"muelle"),
+   agencia:get(row,"agencia"),fecha:get(row,"fecha"),
+   maniobrista:get(row,"maniobrista"),descripcionCarga:get(row,"carga"),
+   // MEDI-PORT no publica IMO/MMSI en esta tabla; se enriquecen por separado.
+   imo:null,mmsi:null
  })).filter(x=>x.buque);
  buquesAutos={fuente:AUTOS_URL,consultado:new Date().toISOString(),actualizado:new Date().toISOString(),disponible:true,total:autos.length,buques:autos};
  console.log("OK MEDI-PORT buques de automóviles: "+autos.length+" registro(s).");
