@@ -230,7 +230,14 @@ try{
   const js=await jr.text();
   const terms=/ajax|\.aspx|\.asmx|webmethod|estado|bahia|navegacion|api|json|url\s*:/i;
   const lines=js.split(/\r?\n/);
-  console.log("CALT_DEFAULT_JS "+JSON.stringify({url:jsUrl,length:js.length,matches:lines.map((line,index)=>({line:index+1,text:line.trim()})).filter(x=>terms.test(x.text)).slice(0,180)}));
+  console.log("CALT_DEFAULT_JS_SOURCE "+js);
+  const endpoint="https://calt.puertodeveracruz.com.mx/Calt/Publico/EstadoTerminalesManiobras.aspx/obtieneEstadoApi";
+  for(const body of ["{}","null"]){
+    try{
+      const er=await fetchWithRetry(endpoint,{method:"POST",headers:{"User-Agent":"Mozilla/5.0","Content-Type":"application/json; charset=utf-8","Accept":"application/json"},body},{attempts:1,timeoutMs:15000,label:"CALT estado API"});
+      console.log("CALT_API_RESULT "+JSON.stringify({body,status:er.status,contentType:er.headers.get("content-type"),payload:(await er.text()).slice(0,10000)}));
+    }catch(error){console.log("CALT_API_ERROR "+JSON.stringify({body,error:error.message}));}
+  }
   const pageUrl=CALT_PAGES[1];
   const pr=await fetchWithRetry(pageUrl,{headers:{"User-Agent":"Mozilla/5.0"}},{attempts:2,timeoutMs:20000,label:"CALT state page inline"});
   const html=await pr.text();
