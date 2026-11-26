@@ -1,10 +1,10 @@
 {
   "fuente": "https://www.mediport.com.mx/tableroOperativo/TablerosPublicos/bitacoraBahiaPublica.aspx",
-  "actualizado": "2026-11-26T18:39:46.862Z",
-  "consultado": "2026-11-26T18:39:46.862Z",
+  "actualizado": "2026-11-26T23:25:45.117Z",
+  "consultado": "2026-11-26T23:25:45.117Z",
   "disponible": true,
   "obsoleta": false,
-  "totalRegistros": 80,
+  "totalRegistros": 81,
   "bahiaNorte": [
     {
       "fecha": "24/11/2026",
@@ -28,6 +28,12 @@
   "bahiaSur": [
     {
       "fecha": "26/11/2026",
+      "hora": "15:30",
+      "evento": "APERTURA DEL PUERTO A LA NAVEGACION MENOR",
+      "motivo": "N/A"
+    },
+    {
+      "fecha": "26/11/2026",
       "hora": "12:00",
       "evento": "APERTURA DEL PUERTO A LA NAVEGACION MAYOR",
       "motivo": "N/A"
@@ -37,18 +43,12 @@
       "hora": "11:00",
       "evento": "CIERRE DEL PUERTO A LA NAVEGACION MAYOR",
       "motivo": "MAL TIEMPO"
-    },
-    {
-      "fecha": "24/11/2026",
-      "hora": "11:00",
-      "evento": "CIERRE DEL PUERTO A LA NAVEGACION MENOR",
-      "motivo": "MAL TIEMPO"
     }
   ],
   "calt": {
     "fuente": "https://calt.puertodeveracruz.com.mx/Calt/",
     "endpoint": "https://calt.puertodeveracruz.com.mx/Calt/Publico/EstadoTerminalesManiobras.aspx/obtieneEstadoApi",
-    "consultado": "2026-11-26T18:39:46.863Z",
+    "consultado": "2026-11-26T23:25:45.117Z",
     "disponible": true,
     "estados": {
       "north": {
@@ -67,10 +67,10 @@
       },
       "south": {
         "minor": {
-          "estado": "Cerrado",
-          "fecha": "24/11/2026 12:00:00 a. m.",
-          "hora": "11:00",
-          "actualizado": "2026-11-24T17:00:00.000Z"
+          "estado": "Abierto",
+          "fecha": "26/11/2026 12:00:00 a. m.",
+          "hora": "15:30",
+          "actualizado": "2026-11-26T21:30:00.000Z"
         },
         "major": {
           "estado": "Abierto",
@@ -80,7 +80,7 @@
         }
       }
     },
-    "actualizado": "2026-11-26T18:00:00.000Z",
+    "actualizado": "2026-11-26T21:30:00.000Z",
     "registros": 4
   },
   "fuenteEstado": "CALT"
