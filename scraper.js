@@ -200,6 +200,30 @@ try{
   bitacora=previous?{...previous,consultado:new Date().toISOString(),disponible:false,obsoleta:true,error:error.message}:{...bitacora,error:error.message};
   console.warn("Mediport bitácora no disponible; la actualización meteorológica continúa:",error.message);
 }
+
+/* Diagnóstico de fuente pública CALT: inspecciona página y recursos embebidos sin asumir estados. */
+const CALT_PAGES=[
+  "https://calt.puertodeveracruz.com.mx/Calt/",
+  "https://calt.puertodeveracruz.com.mx/Calt/Publico/EstadoTerminalesManiobras.aspx"
+];
+const caltDiagnostics=[];
+try{
+  for(const pageUrl of CALT_PAGES){
+    const response=await fetchWithRetry(pageUrl,{
+      headers:{"User-Agent":"Mozilla/5.0 (compatible; CLIMAPUERTO/1.0)","Accept":"text/html,application/xhtml+xml"}
+    },{attempts:2,timeoutMs:20000,label:"CALT "+pageUrl});
+    const html=await response.text();
+    const decode=s=>String(s||"").replace(/&nbsp;|&#160;/gi," ").replace(/&aacute;/gi,"á").replace(/&eacute;/gi,"é").replace(/&iacute;/gi,"í").replace(/&oacute;/gi,"ó").replace(/&uacute;/gi,"ú").replace(/&ntilde;/gi,"ñ").replace(/&amp;/gi,"&").replace(/&#(\d+);/g,(_,n)=>String.fromCharCode(Number(n)));
+    const plain=decode(html.replace(/<script[\s\S]*?<\/script>/gi," ").replace(/<style[\s\S]*?<\/style>/gi," ").replace(/<[^>]+>/g," ").replace(/\s+/g," "));
+    const iframes=[...html.matchAll(/<iframe[^>]+src=["']([^"']+)/gi)].map(m=>new URL(m[1],pageUrl).href);
+    const scripts=[...html.matchAll(/<script[^>]+src=["']([^"']+)/gi)].map(m=>new URL(m[1],pageUrl).href);
+    caltDiagnostics.push({url:pageUrl,status:response.status,title:decode((html.match(/<title[^>]*>([\s\S]*?)<\/title>/i)||[])[1]||""),text:plain.slice(0,9000),iframes,scripts});
+  }
+}catch(error){
+  caltDiagnostics.push({error:error.message});
+}
+console.log("CALT_DIAGNOSTICS "+JSON.stringify(caltDiagnostics));
+
 fs.writeFileSync(bitacoraPath,JSON.stringify(bitacora,null,2)+"\n");
 
 console.log(`OK Open-Meteo: ${dias.length} días, ${hours.length} horas; calidad del aire ${aire?"disponible":"no disponible"}.`);
