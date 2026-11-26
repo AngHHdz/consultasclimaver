@@ -222,6 +222,22 @@ try{
 }catch(error){
   caltDiagnostics.push({error:error.message});
 }
+
+/* Inspecciona el JavaScript público que construye el tablero de estados CALT. */
+try{
+  const jsUrl="https://calt.puertodeveracruz.com.mx/Calt/Scripts/Paginas/Default.js";
+  const jr=await fetchWithRetry(jsUrl,{headers:{"User-Agent":"Mozilla/5.0"}},{attempts:2,timeoutMs:20000,label:"CALT Default.js"});
+  const js=await jr.text();
+  const terms=/ajax|\.aspx|\.asmx|webmethod|estado|bahia|navegacion|api|json|url\s*:/i;
+  const lines=js.split(/\r?\n/);
+  console.log("CALT_DEFAULT_JS "+JSON.stringify({url:jsUrl,length:js.length,matches:lines.map((line,index)=>({line:index+1,text:line.trim()})).filter(x=>terms.test(x.text)).slice(0,180)}));
+  const pageUrl=CALT_PAGES[1];
+  const pr=await fetchWithRetry(pageUrl,{headers:{"User-Agent":"Mozilla/5.0"}},{attempts:2,timeoutMs:20000,label:"CALT state page inline"});
+  const html=await pr.text();
+  const inline=[...html.matchAll(/<script(?![^>]*src=)[^>]*>([\s\S]*?)<\/script>/gi)].map(m=>m[1]).join("\n");
+  console.log("CALT_INLINE_JS "+JSON.stringify(inline.split(/\r?\n/).map((line,index)=>({line:index+1,text:line.trim()})).filter(x=>terms.test(x.text)).slice(0,180)));
+}catch(error){console.log("CALT_JS_DIAGNOSTIC_ERROR "+error.message);}
+
 console.log("CALT_DIAGNOSTICS "+JSON.stringify(caltDiagnostics));
 
 fs.writeFileSync(bitacoraPath,JSON.stringify(bitacora,null,2)+"\n");
