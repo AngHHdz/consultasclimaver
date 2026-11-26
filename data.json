@@ -1,8 +1,8 @@
 {
   "fuente": "Open-Meteo",
   "fuenteUrl": "https://open-meteo.com/",
-  "actualizado": "2026-11-26T15:35:25.370Z",
-  "consultado": "2026-11-26T15:35:25.370Z",
+  "actualizado": "2026-11-26T18:37:17.724Z",
+  "consultado": "2026-11-26T18:37:17.724Z",
   "ubicacion": "Veracruz, Veracruz, México",
   "coordenadas": {
     "latitud": 19.2,
@@ -11,19 +11,19 @@
   "zonaHoraria": "America/Mexico_City",
   "unidades": "°C · km/h · mm",
   "actual": {
-    "hora": "09:30",
-    "observacion": "2026-11-26T09:30",
+    "hora": "12:30",
+    "observacion": "2026-11-26T12:30",
     "condicion": "Nublado",
-    "temp": 21.9,
-    "sensacion": 19.5,
-    "humedad": 66,
-    "presion": 1023.2,
+    "temp": 21.6,
+    "sensacion": 19,
+    "humedad": 68,
+    "presion": 1022.2,
     "viento": {
-      "dir": "NNO",
-      "min": 28.9,
-      "max": 55.4
+      "dir": "N",
+      "min": 30.8,
+      "max": 61.2
     },
-    "rachas": 55.4,
+    "rachas": 61.2,
     "codigo": 3,
     "isDay": 1,
     "precipitacion": 0
@@ -45,7 +45,7 @@
       "rachas": 61.6,
       "salida": "2026-11-26T06:38",
       "puesta": "2026-11-26T17:45",
-      "uvMax": 2.8
+      "uvMax": 2
     },
     {
       "dia": "viernes",
@@ -63,7 +63,7 @@
       "rachas": 44.6,
       "salida": "2026-11-27T06:39",
       "puesta": "2026-11-27T17:45",
-      "uvMax": 2.8
+      "uvMax": 3.55
     },
     {
       "dia": "sábado",
@@ -81,7 +81,7 @@
       "rachas": 22,
       "salida": "2026-11-28T06:39",
       "puesta": "2026-11-28T17:45",
-      "uvMax": 2.8
+      "uvMax": 3.05
     },
     {
       "dia": "domingo",
@@ -99,7 +99,7 @@
       "rachas": 32,
       "salida": "2026-11-29T06:40",
       "puesta": "2026-11-29T17:45",
-      "uvMax": 2.9
+      "uvMax": 3.95
     },
     {
       "dia": "lunes",
@@ -117,7 +117,7 @@
       "rachas": 72.4,
       "salida": "2026-11-30T06:41",
       "puesta": "2026-11-30T17:45",
-      "uvMax": 6.25
+      "uvMax": 6.2
     },
     {
       "dia": "martes",
@@ -135,7 +135,7 @@
       "rachas": 33.1,
       "salida": "2026-12-01T06:41",
       "puesta": "2026-12-01T17:45",
-      "uvMax": 6.2
+      "uvMax": 5.85
     },
     {
       "dia": "miércoles",
@@ -398,7 +398,7 @@
       "rachas": 54.7,
       "presion": 1023,
       "uv": {
-        "indice": 0.5
+        "indice": 0.45
       },
       "isDay": 1,
       "viento": {
@@ -423,7 +423,7 @@
       "rachas": 56.5,
       "presion": 1023.4,
       "uv": {
-        "indice": 1
+        "indice": 0.85
       },
       "isDay": 1,
       "viento": {
@@ -448,7 +448,7 @@
       "rachas": 61.6,
       "presion": 1023.4,
       "uv": {
-        "indice": 1.45
+        "indice": 1.2
       },
       "isDay": 1,
       "viento": {
@@ -473,7 +473,7 @@
       "rachas": 61.2,
       "presion": 1022.6,
       "uv": {
-        "indice": 2.8
+        "indice": 2
       },
       "isDay": 1,
       "viento": {
@@ -498,7 +498,7 @@
       "rachas": 60.8,
       "presion": 1021.7,
       "uv": {
-        "indice": 2.25
+        "indice": 1.7
       },
       "isDay": 1,
       "viento": {
@@ -523,7 +523,7 @@
       "rachas": 57.6,
       "presion": 1020.8,
       "uv": {
-        "indice": 1.75
+        "indice": 1.4
       },
       "isDay": 1,
       "viento": {
@@ -548,7 +548,7 @@
       "rachas": 56.2,
       "presion": 1020.4,
       "uv": {
-        "indice": 1.1
+        "indice": 0.95
       },
       "isDay": 1,
       "viento": {
@@ -573,7 +573,7 @@
       "rachas": 58,
       "presion": 1020.2,
       "uv": {
-        "indice": 0.6
+        "indice": 0.5
       },
       "isDay": 1,
       "viento": {
@@ -598,7 +598,7 @@
       "rachas": 53.6,
       "presion": 1020.6,
       "uv": {
-        "indice": 0.25
+        "indice": 0.2
       },
       "isDay": 1,
       "viento": {
@@ -623,7 +623,7 @@
       "rachas": 55.4,
       "presion": 1021.2,
       "uv": {
-        "indice": 0.05
+        "indice": 0
       },
       "isDay": 0,
       "viento": {
@@ -973,7 +973,7 @@
       "rachas": 23,
       "presion": 1022.8,
       "uv": {
-        "indice": 0.2
+        "indice": 0.25
       },
       "isDay": 1,
       "viento": {
@@ -998,7 +998,7 @@
       "rachas": 29.9,
       "presion": 1023.7,
       "uv": {
-        "indice": 0.75
+        "indice": 0.65
       },
       "isDay": 1,
       "viento": {
@@ -1023,7 +1023,7 @@
       "rachas": 35.3,
       "presion": 1023.9,
       "uv": {
-        "indice": 1.5
+        "indice": 1.25
       },
       "isDay": 1,
       "viento": {
@@ -1048,7 +1048,7 @@
       "rachas": 35.6,
       "presion": 1023.4,
       "uv": {
-        "indice": 2
+        "indice": 2.05
       },
       "isDay": 1,
       "viento": {
@@ -1073,7 +1073,7 @@
       "rachas": 35.6,
       "presion": 1022.3,
       "uv": {
-        "indice": 2.4
+        "indice": 2.9
       },
       "isDay": 1,
       "viento": {
@@ -1098,7 +1098,7 @@
       "rachas": 36.4,
       "presion": 1020.8,
       "uv": {
-        "indice": 2.75
+        "indice": 3.55
       },
       "isDay": 1,
       "viento": {
@@ -1123,7 +1123,7 @@
       "rachas": 43.2,
       "presion": 1019.5,
       "uv": {
-        "indice": 2.25
+        "indice": 2.75
       },
       "isDay": 1,
       "viento": {
@@ -1148,7 +1148,7 @@
       "rachas": 44.6,
       "presion": 1018.6,
       "uv": {
-        "indice": 2.8
+        "indice": 2.05
       },
       "isDay": 1,
       "viento": {
@@ -1173,7 +1173,7 @@
       "rachas": 44.6,
       "presion": 1018.8,
       "uv": {
-        "indice": 1.6
+        "indice": 1.4
       },
       "isDay": 1,
       "viento": {
@@ -1573,7 +1573,7 @@
       "rachas": 14.8,
       "presion": 1019.5,
       "uv": {
-        "indice": 0.55
+        "indice": 0.35
       },
       "isDay": 1,
       "viento": {
@@ -1598,7 +1598,7 @@
       "rachas": 15.1,
       "presion": 1019.9,
       "uv": {
-        "indice": 1.4
+        "indice": 1.25
       },
       "isDay": 1,
       "viento": {
@@ -1623,7 +1623,7 @@
       "rachas": 16.2,
       "presion": 1019.8,
       "uv": {
-        "indice": 1.45
+        "indice": 3.05
       },
       "isDay": 1,
       "viento": {
@@ -1648,7 +1648,7 @@
       "rachas": 17.6,
       "presion": 1018.9,
       "uv": {
-        "indice": 2.2
+        "indice": 2.4
       },
       "isDay": 1,
       "viento": {
@@ -1673,7 +1673,7 @@
       "rachas": 16.9,
       "presion": 1017.6,
       "uv": {
-        "indice": 2.8
+        "indice": 2.9
       },
       "isDay": 1,
       "viento": {
@@ -1698,7 +1698,7 @@
       "rachas": 17.3,
       "presion": 1016.3,
       "uv": {
-        "indice": 1.95
+        "indice": 2.65
       },
       "isDay": 1,
       "viento": {
@@ -1723,7 +1723,7 @@
       "rachas": 16.6,
       "presion": 1014.6,
       "uv": {
-        "indice": 1.8
+        "indice": 2.2
       },
       "isDay": 1,
       "viento": {
@@ -1748,7 +1748,7 @@
       "rachas": 16.9,
       "presion": 1013.7,
       "uv": {
-        "indice": 1.4
+        "indice": 2.05
       },
       "isDay": 1,
       "viento": {
@@ -1773,7 +1773,7 @@
       "rachas": 16.2,
       "presion": 1013.7,
       "uv": {
-        "indice": 1.25
+        "indice": 1.6
       },
       "isDay": 1,
       "viento": {
@@ -1798,7 +1798,7 @@
       "rachas": 16.9,
       "presion": 1013.8,
       "uv": {
-        "indice": 0.75
+        "indice": 0.85
       },
       "isDay": 1,
       "viento": {
@@ -2173,7 +2173,7 @@
       "rachas": 12.6,
       "presion": 1014.5,
       "uv": {
-        "indice": 0.2
+        "indice": 0.25
       },
       "isDay": 1,
       "viento": {
@@ -2198,7 +2198,7 @@
       "rachas": 15.1,
       "presion": 1015.2,
       "uv": {
-        "indice": 0.4
+        "indice": 1
       },
       "isDay": 1,
       "viento": {
@@ -2223,7 +2223,7 @@
       "rachas": 15.1,
       "presion": 1015.3,
       "uv": {
-        "indice": 0.9
+        "indice": 1.7
       },
       "isDay": 1,
       "viento": {
@@ -2248,7 +2248,7 @@
       "rachas": 16.6,
       "presion": 1014.7,
       "uv": {
-        "indice": 2.1
+        "indice": 1.8
       },
       "isDay": 1,
       "viento": {
@@ -2273,7 +2273,7 @@
       "rachas": 18.4,
       "presion": 1013.9,
       "uv": {
-        "indice": 2.9
+        "indice": 3.95
       },
       "isDay": 1,
       "viento": {
@@ -2298,7 +2298,7 @@
       "rachas": 19.4,
       "presion": 1012.8,
       "uv": {
-        "indice": 2.45
+        "indice": 3.2
       },
       "isDay": 1,
       "viento": {
@@ -2323,7 +2323,7 @@
       "rachas": 18.7,
       "presion": 1012,
       "uv": {
-        "indice": 1.95
+        "indice": 1.75
       },
       "isDay": 1,
       "viento": {
@@ -2348,7 +2348,7 @@
       "rachas": 18,
       "presion": 1011.8,
       "uv": {
-        "indice": 0.55
+        "indice": 1.45
       },
       "isDay": 1,
       "viento": {
@@ -2373,7 +2373,7 @@
       "rachas": 14.4,
       "presion": 1012,
       "uv": {
-        "indice": 0.3
+        "indice": 0.6
       },
       "isDay": 1,
       "viento": {
@@ -2398,7 +2398,7 @@
       "rachas": 13.3,
       "presion": 1012.7,
       "uv": {
-        "indice": 0.1
+        "indice": 0.25
       },
       "isDay": 1,
       "viento": {
@@ -2423,7 +2423,7 @@
       "rachas": 11.9,
       "presion": 1013.7,
       "uv": {
-        "indice": 0.05
+        "indice": 0
       },
       "isDay": 0,
       "viento": {
@@ -2773,7 +2773,7 @@
       "rachas": 42.5,
       "presion": 1020,
       "uv": {
-        "indice": 0.6
+        "indice": 0.5
       },
       "isDay": 1,
       "viento": {
@@ -2798,7 +2798,7 @@
       "rachas": 40,
       "presion": 1020.6,
       "uv": {
-        "indice": 2
+        "indice": 1.45
       },
       "isDay": 1,
       "viento": {
@@ -2823,7 +2823,7 @@
       "rachas": 41.8,
       "presion": 1020.5,
       "uv": {
-        "indice": 3.7
+        "indice": 3
       },
       "isDay": 1,
       "viento": {
@@ -2898,7 +2898,7 @@
       "rachas": 51.5,
       "presion": 1018.4,
       "uv": {
-        "indice": 6.25
+        "indice": 6.2
       },
       "isDay": 1,
       "viento": {
@@ -2948,7 +2948,7 @@
       "rachas": 52.6,
       "presion": 1016.9,
       "uv": {
-        "indice": 4.4
+        "indice": 4.3
       },
       "isDay": 1,
       "viento": {
@@ -3398,7 +3398,7 @@
       "rachas": 13.7,
       "presion": 1019,
       "uv": {
-        "indice": 2.2
+        "indice": 2.25
       },
       "isDay": 1,
       "viento": {
@@ -3423,7 +3423,7 @@
       "rachas": 13.7,
       "presion": 1018.6,
       "uv": {
-        "indice": 3.75
+        "indice": 3.9
       },
       "isDay": 1,
       "viento": {
@@ -3448,7 +3448,7 @@
       "rachas": 13.7,
       "presion": 1017.8,
       "uv": {
-        "indice": 4.9
+        "indice": 5
       },
       "isDay": 1,
       "viento": {
@@ -3473,7 +3473,7 @@
       "rachas": 14.8,
       "presion": 1017,
       "uv": {
-        "indice": 5.65
+        "indice": 5.6
       },
       "isDay": 1,
       "viento": {
@@ -3498,7 +3498,7 @@
       "rachas": 18.7,
       "presion": 1016.1,
       "uv": {
-        "indice": 6.2
+        "indice": 5.85
       },
       "isDay": 1,
       "viento": {
@@ -3523,7 +3523,7 @@
       "rachas": 23.8,
       "presion": 1015.1,
       "uv": {
-        "indice": 5.6
+        "indice": 5.25
       },
       "isDay": 1,
       "viento": {
@@ -3548,7 +3548,7 @@
       "rachas": 27.4,
       "presion": 1014.5,
       "uv": {
-        "indice": 4.4
+        "indice": 4.15
       },
       "isDay": 1,
       "viento": {
@@ -4368,17 +4368,17 @@
     "restante": null
   },
   "aire": {
-    "indice": 30,
+    "indice": 35,
     "nivel": "Aceptable",
     "escala": "European AQI",
-    "pm10": 14,
+    "pm10": 14.1,
     "pm25": 10,
-    "ozono": 79,
-    "dioxidoNitrogeno": 3
+    "ozono": 89,
+    "dioxidoNitrogeno": 1.2
   },
   "climaMes": null,
   "resumen": {
-    "hoy": "En Veracruz: nublado, 22°C; sensación térmica de 20°C. Viento NNO a 29 km/h, con rachas de 55 km/h."
+    "hoy": "En Veracruz: nublado, 22°C; sensación térmica de 19°C. Viento N a 31 km/h, con rachas de 61 km/h."
   },
   "luna": [],
   "ciudades": []
