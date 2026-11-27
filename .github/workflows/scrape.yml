@@ -24,11 +24,23 @@ jobs:
           node-version: 22
       - name: Instalar dependencias
         run: npm install
-      - name: Consultar clima, bitácora, CALT y buques automotrices MEDI-PORT
+      # Cada fuente corre por separado: si una falla (p. ej. Open-Meteo) las demás se publican igual.
+      - name: Consultar clima, bitácora y CALT
+        continue-on-error: true
         run: npm run scrape
+      - name: Consultar buques automotrices MEDI-PORT
+        continue-on-error: true
+        run: node scrape-buques.js
       - name: Publicar datos actualizados
+        if: always()
         run: |
           git config user.name "bot"
           git config user.email "bot@users.noreply.github.com"
           git add data.json data.js bitacora.json buques-autos.json
-          git diff --cached --quiet || (git commit -m "update clima y operaciones portuarias" && git push)
+          if git diff --cached --quiet; then echo "Sin cambios"; exit 0; fi
+          git commit -m "update clima y operaciones portuarias"
+          for i in 1 2 3; do
+            git pull --rebase --autostash origin main && git push && exit 0
+            sleep 5
+          done
+          exit 1
