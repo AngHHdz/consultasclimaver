@@ -251,50 +251,6 @@ bitacora.fuenteEstado=calt.disponible?"CALT":"Mediport";
 
 fs.writeFileSync(bitacoraPath,JSON.stringify(bitacora,null,2)+"\n");
 
-/* Buques automotrices: API oficial utilizada por la tabla pública de MEDI-PORT. */
-const AUTOS_PAGE="https://www.mediport.com.mx/tableroOperativo/TablerosPublicos/atracados.aspx";
-const AUTOS_API="https://www.mediport.com.mx/tableroOperativo/Tableros/buquesAtracados.aspx/consultaBuquesAtracados";
-let buquesAutos={fuente:AUTOS_PAGE,endpoint:AUTOS_API,consultado:new Date().toISOString(),actualizado:null,disponible:false,total:0,buques:[]};
-try{
- const r=await fetchWithRetry(AUTOS_API,{
-   method:"POST",
-   headers:{
-     "User-Agent":"Mozilla/5.0 (compatible; CLIMAPUERTO/1.0)",
-     "Content-Type":"application/json; charset=utf-8",
-     "Accept":"application/json, text/javascript, */*; q=0.01",
-     "X-Requested-With":"XMLHttpRequest",
-     "Origin":"https://www.mediport.com.mx",
-     "Referer":AUTOS_PAGE
-   },
-   body:JSON.stringify({pNidApi:1})
- },{attempts:3,timeoutMs:30000,label:"MEDI-PORT API buques atracados"});
- const payload=await r.json();
- const records=payload?.d?.datos;
- if(Number(payload?.d?.estado)!==1||!Array.isArray(records))throw new Error(payload?.d?.mensaje||"La API de buques no devolvió un arreglo válido.");
- const autos=records.filter(row=>String(row.carga||"").trim()==="21"||/autom[oó]viles/i.test(String(row.descripcion_carga||""))).map(row=>({
-   viaje:String(row.viaje||""),
-   buque:String(row.buque||""),
-   muelle:String(row.muelle||""),
-   agencia:String(row.naviera||""),
-   fecha:String(row.atraque||""),
-   maniobrista:String(row.maniobrista||"").trim(),
-   descripcionCarga:String(row.descripcion_carga||"AUTOMOVILES"),
-   eta:String(row.eta||""),
-   etf:String(row.etf||""),
-   eslora:String(row.eslora||""),
-   calado:String(row.calado||""),
-   imo:String(row.imo||"")
- })).filter(row=>row.viaje&&row.buque);
- if(records.length===0)throw new Error("La API respondió sin registros; se evita sobrescribir el último listado válido.");
- buquesAutos={fuente:AUTOS_PAGE,endpoint:AUTOS_API,consultado:new Date().toISOString(),actualizado:new Date().toISOString(),disponible:true,total:autos.length,totalBuquesAtracados:records.length,buques:autos};
- console.log("OK MEDI-PORT API buques: "+records.length+" atracados; "+autos.length+" con carga automotriz ("+autos.map(x=>x.buque+" / "+x.viaje).join(", ")+").");
-}catch(error){
- console.warn("MEDI-PORT API buques automotrices no disponible:",error.message);
- try{
-   const previous=JSON.parse(fs.readFileSync("buques-autos.json","utf8"));
-   buquesAutos={...previous,consultado:new Date().toISOString(),disponible:false,error:error.message};
- }catch{buquesAutos={...buquesAutos,error:error.message};}
-}
-fs.writeFileSync("buques-autos.json",JSON.stringify(buquesAutos,null,2)+"\n");
+/* Los buques automotrices los consulta scrape-buques.js (paso independiente del workflow). */
 
 console.log(`OK Open-Meteo: ${dias.length} días, ${hours.length} horas; calidad del aire ${aire?"disponible":"no disponible"}.`);
