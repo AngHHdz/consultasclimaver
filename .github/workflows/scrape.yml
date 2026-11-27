@@ -1,27 +1,34 @@
-name: Scrape clima
+name: Scrape clima y operaciones portuarias
 on:
-  schedule: [{ cron: "*/30 * * * *" }]
+  schedule:
+    - cron: "*/10 * * * *"
   workflow_dispatch:
   push:
     paths:
       - "scraper.js"
+      - "scrape-buques.js"
       - ".github/workflows/scrape.yml"
 permissions:
   contents: write
+concurrency:
+  group: scrape-portuario
+  cancel-in-progress: false
 jobs:
   scrape:
     runs-on: ubuntu-latest
+    timeout-minutes: 8
     steps:
       - uses: actions/checkout@v5
       - uses: actions/setup-node@v6
-        with: { node-version: 22 }
-      - name: Actualizar buques automotrices MEDI-PORT
-        run: node scrape-buques.js
-      - name: Actualizar clima y bitácora
-        run: npm install && npm run scrape
-        continue-on-error: true
-      - run: |
+        with:
+          node-version: 22
+      - name: Instalar dependencias
+        run: npm install
+      - name: Consultar clima, bitácora, CALT y buques automotrices MEDI-PORT
+        run: npm run scrape
+      - name: Publicar datos actualizados
+        run: |
           git config user.name "bot"
           git config user.email "bot@users.noreply.github.com"
           git add data.json data.js bitacora.json buques-autos.json
-          git diff --cached --quiet || (git commit -m "update clima" && git push)
+          git diff --cached --quiet || (git commit -m "update clima y operaciones portuarias" && git push)
