@@ -1,86 +1,190 @@
 {
   "fuente": "https://www.mediport.com.mx/tableroOperativo/TablerosPublicos/bitacoraBahiaPublica.aspx",
-  "actualizado": "2026-11-27T08:55:11.473Z",
-  "consultado": "2026-11-27T08:55:11.473Z",
+  "actualizado": "2026-11-27T15:47:09.925Z",
+  "consultado": "2026-11-27T15:47:09.925Z",
   "disponible": true,
   "obsoleta": false,
-  "totalRegistros": 79,
+  "totalRegistros": 83,
   "bahiaNorte": [
     {
+      "folio": "3323",
+      "fecha": "27/11/2026",
+      "hora": "08:00",
+      "evento": "APERTURA DEL PUERTO A LA NAVEGACION MENOR",
+      "motivo": "N/A"
+    },
+    {
+      "folio": "3322",
+      "fecha": "27/11/2026",
+      "hora": "08:00",
+      "evento": "APERTURA DEL PUERTO A LA NAVEGACION MAYOR",
+      "motivo": "N/A"
+    },
+    {
+      "folio": "3315",
       "fecha": "24/11/2026",
       "hora": "11:00",
       "evento": "CIERRE DEL PUERTO A LA NAVEGACION MAYOR",
       "motivo": "MAL TIEMPO"
     },
     {
+      "folio": "3314",
       "fecha": "24/11/2026",
       "hora": "11:00",
       "evento": "CIERRE DEL PUERTO A LA NAVEGACION MENOR",
       "motivo": "MAL TIEMPO"
     },
     {
+      "folio": "3311",
       "fecha": "24/11/2026",
       "hora": "05:00",
       "evento": "APERTURA DEL PUERTO A LA NAVEGACION MENOR",
+      "motivo": "N/A"
+    },
+    {
+      "folio": "3309",
+      "fecha": "24/11/2026",
+      "hora": "05:00",
+      "evento": "APERTURA DEL PUERTO A LA NAVEGACION MAYOR",
+      "motivo": "N/A"
+    },
+    {
+      "folio": "3307",
+      "fecha": "23/11/2026",
+      "hora": "14:30",
+      "evento": "CIERRE DEL PUERTO A LA NAVEGACION MAYOR",
+      "motivo": "MAL TIEMPO"
+    },
+    {
+      "folio": "3306",
+      "fecha": "23/11/2026",
+      "hora": "14:30",
+      "evento": "CIERRE DEL PUERTO A LA NAVEGACION MENOR",
+      "motivo": "MAL TIEMPO"
+    },
+    {
+      "folio": "3303",
+      "fecha": "20/11/2026",
+      "hora": "07:00",
+      "evento": "APERTURA DEL PUERTO A LA NAVEGACION MENOR",
+      "motivo": "N/A"
+    },
+    {
+      "folio": "3302",
+      "fecha": "20/11/2026",
+      "hora": "07:00",
+      "evento": "APERTURA DEL PUERTO A LA NAVEGACION MAYOR",
       "motivo": "N/A"
     }
   ],
   "bahiaSur": [
     {
+      "folio": "3321",
+      "fecha": "27/11/2026",
+      "hora": "05:00",
+      "evento": "APERTURA DEL PUERTO A LA NAVEGACION MENOR",
+      "motivo": "N/A"
+    },
+    {
+      "folio": "3320",
+      "fecha": "27/11/2026",
+      "hora": "05:00",
+      "evento": "APERTURA DEL PUERTO A LA NAVEGACION MAYOR",
+      "motivo": "N/A"
+    },
+    {
+      "folio": "3319",
       "fecha": "26/11/2026",
       "hora": "18:00",
       "evento": "CIERRE DEL PUERTO A LA NAVEGACION MAYOR",
       "motivo": "MAL TIEMPO"
     },
     {
+      "folio": "3318",
       "fecha": "26/11/2026",
       "hora": "18:00",
       "evento": "CIERRE DEL PUERTO A LA NAVEGACION MENOR",
       "motivo": "MAL TIEMPO"
     },
     {
+      "folio": "3317",
       "fecha": "26/11/2026",
       "hora": "15:30",
       "evento": "APERTURA DEL PUERTO A LA NAVEGACION MENOR",
+      "motivo": "N/A"
+    },
+    {
+      "folio": "3316",
+      "fecha": "26/11/2026",
+      "hora": "12:00",
+      "evento": "APERTURA DEL PUERTO A LA NAVEGACION MAYOR",
+      "motivo": "N/A"
+    },
+    {
+      "folio": "3313",
+      "fecha": "24/11/2026",
+      "hora": "11:00",
+      "evento": "CIERRE DEL PUERTO A LA NAVEGACION MAYOR",
+      "motivo": "MAL TIEMPO"
+    },
+    {
+      "folio": "3312",
+      "fecha": "24/11/2026",
+      "hora": "11:00",
+      "evento": "CIERRE DEL PUERTO A LA NAVEGACION MENOR",
+      "motivo": "MAL TIEMPO"
+    },
+    {
+      "folio": "3310",
+      "fecha": "24/11/2026",
+      "hora": "05:00",
+      "evento": "APERTURA DEL PUERTO A LA NAVEGACION MENOR",
+      "motivo": "N/A"
+    },
+    {
+      "folio": "3308",
+      "fecha": "24/11/2026",
+      "hora": "05:00",
+      "evento": "APERTURA DEL PUERTO A LA NAVEGACION MAYOR",
       "motivo": "N/A"
     }
   ],
   "calt": {
     "fuente": "https://calt.puertodeveracruz.com.mx/Calt/",
     "endpoint": "https://calt.puertodeveracruz.com.mx/Calt/Publico/EstadoTerminalesManiobras.aspx/obtieneEstadoApi",
-    "consultado": "2026-11-27T08:55:11.473Z",
+    "consultado": "2026-11-27T15:47:09.925Z",
     "disponible": true,
     "estados": {
       "north": {
         "minor": {
-          "estado": "Cerrado",
-          "fecha": "24/11/2026 12:00:00 a. m.",
-          "hora": "11:00",
-          "actualizado": "2026-11-24T17:00:00.000Z"
+          "estado": "Abierto",
+          "fecha": "27/11/2026 12:00:00 a. m.",
+          "hora": "08:00",
+          "actualizado": "2026-11-27T14:00:00.000Z"
         },
         "major": {
-          "estado": "Cerrado",
-          "fecha": "24/11/2026 12:00:00 a. m.",
-          "hora": "11:00",
-          "actualizado": "2026-11-24T17:00:00.000Z"
+          "estado": "Abierto",
+          "fecha": "27/11/2026 12:00:00 a. m.",
+          "hora": "08:00",
+          "actualizado": "2026-11-27T14:00:00.000Z"
         }
       },
       "south": {
         "minor": {
-          "estado": "Cerrado",
-          "fecha": "26/11/2026 12:00:00 a. m.",
-          "hora": "18:00",
-          "actualizado": "2026-11-27T00:00:00.000Z"
+          "estado": "Abierto",
+          "fecha": "27/11/2026 12:00:00 a. m.",
+          "hora": "05:00",
+          "actualizado": "2026-11-27T11:00:00.000Z"
         },
         "major": {
-          "estado": "Cerrado",
-          "fecha": "26/11/2026 12:00:00 a. m.",
-          "hora": "18:00",
-          "actualizado": "2026-11-27T00:00:00.000Z"
+          "estado": "Abierto",
+          "fecha": "27/11/2026 12:00:00 a. m.",
+          "hora": "05:00",
+          "actualizado": "2026-11-27T11:00:00.000Z"
         }
       }
     },
-    "actualizado": "2026-11-27T00:00:00.000Z",
+    "actualizado": "2026-11-27T14:00:00.000Z",
     "registros": 4
   },
   "fuenteEstado": "CALT"
