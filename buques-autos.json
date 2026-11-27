@@ -1,8 +1,8 @@
 {
   "fuente": "https://www.mediport.com.mx/tableroOperativo/TablerosPublicos/atracados.aspx",
   "endpoint": "https://www.mediport.com.mx/tableroOperativo/Tableros/buquesAtracados.aspx/consultaBuquesAtracados",
-  "consultado": "2026-11-27T22:25:42.080Z",
-  "actualizado": "2026-11-27T22:25:42.080Z",
+  "consultado": "2026-11-27T22:47:55.255Z",
+  "actualizado": "2026-11-27T22:47:55.255Z",
   "disponible": true,
   "total": 3,
   "totalBuquesAtracados": 32,
@@ -51,6 +51,227 @@
       "calado": "7.7",
       "imo": "9748289",
       "nidBuque": "11906"
+    }
+  ],
+  "cargas": {
+    "AUTOMOVILES": 3,
+    "CARGA GENERAL": 1,
+    "ABANDERAMIENTO": 4,
+    "GRANEL AGRICOLA CONVENCIONAL": 1,
+    "GRANEL AGRICOLA ESPECIALIZADO": 4,
+    "REPARACION BUQUE": 4,
+    "TRAE A LA BARCAZA": 1,
+    "(sin descripción)": 4,
+    "COMBUSTIBLE (FLUIDO)": 2,
+    "PRESTADOR DE SERVICIO DE REMOL": 3,
+    "REMOLCADOR": 1,
+    "CONTENEDORES CONVENCIONAL": 1,
+    "CONTENEDORES ESPECIALIZADA": 1,
+    "GRANEL MINERAL": 2
+  },
+  "otros": [
+    {
+      "buque": "SILVERFJORD",
+      "muelle": "2 N",
+      "carga": "14",
+      "descripcionCarga": "CARGA GENERAL",
+      "fecha": "26/11/2026 17:50"
+    },
+    {
+      "buque": "SAAM RARAMURI",
+      "muelle": "4 E",
+      "carga": "15",
+      "descripcionCarga": "ABANDERAMIENTO",
+      "fecha": "19/11/2026 13:36"
+    },
+    {
+      "buque": "SAAM ZAPOTECA",
+      "muelle": "4 E",
+      "carga": "15",
+      "descripcionCarga": "ABANDERAMIENTO",
+      "fecha": "13/11/2026 13:10"
+    },
+    {
+      "buque": "BULK BOLIVIA",
+      "muelle": "8 OESTE",
+      "carga": "1",
+      "descripcionCarga": "GRANEL AGRICOLA CONVENCIONAL",
+      "fecha": "21/11/2026 2:46"
+    },
+    {
+      "buque": "TRIDENT UNITY",
+      "muelle": "8 ESTE",
+      "carga": "5",
+      "descripcionCarga": "GRANEL AGRICOLA ESPECIALIZADO",
+      "fecha": "18/11/2026 13:33"
+    },
+    {
+      "buque": "CAPTAIN D",
+      "muelle": "4 SP",
+      "carga": "5",
+      "descripcionCarga": "GRANEL AGRICOLA ESPECIALIZADO",
+      "fecha": "27/11/2026 14:16"
+    },
+    {
+      "buque": "EBANO",
+      "muelle": "4 SR",
+      "carga": "28",
+      "descripcionCarga": "REPARACION BUQUE",
+      "fecha": "22/11/2026 8:29"
+    },
+    {
+      "buque": "MALYOVITSA",
+      "muelle": "4 NP",
+      "carga": "5",
+      "descripcionCarga": "GRANEL AGRICOLA ESPECIALIZADO",
+      "fecha": "22/11/2026 15:50"
+    },
+    {
+      "buque": "PROVINCIA DE AZ",
+      "muelle": "4 NR",
+      "carga": "44",
+      "descripcionCarga": "TRAE A LA BARCAZA",
+      "fecha": "16/08/2025 8:30"
+    },
+    {
+      "buque": "ONEGO GABRIELA",
+      "muelle": "DIQUE N? 2 NORTE",
+      "carga": "28",
+      "descripcionCarga": "REPARACION BUQUE",
+      "fecha": "23/11/2026 9:44"
+    },
+    {
+      "buque": "CREST BAZAN 1",
+      "muelle": "REP. NAV. PTE. NORTE",
+      "carga": "6",
+      "descripcionCarga": "",
+      "fecha": "01/09/2026 10:26"
+    },
+    {
+      "buque": "CREST BAZAN 2",
+      "muelle": "REP. NAV. PTE. NORTE",
+      "carga": "28",
+      "descripcionCarga": "REPARACION BUQUE",
+      "fecha": "01/09/2026 9:30"
+    },
+    {
+      "buque": "MARTY J.",
+      "muelle": "REP. NAV. PTE CENTRO",
+      "carga": "28",
+      "descripcionCarga": "REPARACION BUQUE",
+      "fecha": "26/10/2026 12:49"
+    },
+    {
+      "buque": "TULA",
+      "muelle": "REP. NAV. OTE NORTE",
+      "carga": "6",
+      "descripcionCarga": "",
+      "fecha": "30/11/2023 11:44"
+    },
+    {
+      "buque": "SEA CHEM-1",
+      "muelle": "DIQUE N?5 NORTE",
+      "carga": "6",
+      "descripcionCarga": "",
+      "fecha": "06/10/2026 7:02"
+    },
+    {
+      "buque": "ALPINE LIGHT",
+      "muelle": "PEMEX OTE",
+      "carga": "35",
+      "descripcionCarga": "COMBUSTIBLE (FLUIDO)",
+      "fecha": "27/11/2026 11:08"
+    },
+    {
+      "buque": "JESUS",
+      "muelle": "2 ESTE",
+      "carga": "48",
+      "descripcionCarga": "PRESTADOR DE SERVICIO DE REMOL",
+      "fecha": "09/11/2026 15:42"
+    },
+    {
+      "buque": "DON PEDRO",
+      "muelle": "2 ESTE",
+      "carga": "36",
+      "descripcionCarga": "REMOLCADOR",
+      "fecha": "09/11/2026 15:41"
+    },
+    {
+      "buque": "TOMY",
+      "muelle": "2 ESTE",
+      "carga": "48",
+      "descripcionCarga": "PRESTADOR DE SERVICIO DE REMOL",
+      "fecha": "09/11/2026 15:41"
+    },
+    {
+      "buque": "DON CARLOS",
+      "muelle": "2 ESTE",
+      "carga": "48",
+      "descripcionCarga": "PRESTADOR DE SERVICIO DE REMOL",
+      "fecha": "09/11/2026 15:42"
+    },
+    {
+      "buque": "SEA POWER",
+      "muelle": "DIQUE N5 SUR",
+      "carga": "6",
+      "descripcionCarga": "",
+      "fecha": "06/10/2026 7:34"
+    },
+    {
+      "buque": "STI ST CHARLES",
+      "muelle": "PEMEX PTE",
+      "carga": "35",
+      "descripcionCarga": "COMBUSTIBLE (FLUIDO)",
+      "fecha": "27/11/2026 12:39"
+    },
+    {
+      "buque": "LOCH CRINAN",
+      "muelle": "5 S",
+      "carga": "5",
+      "descripcionCarga": "GRANEL AGRICOLA ESPECIALIZADO",
+      "fecha": "20/11/2026 14:37"
+    },
+    {
+      "buque": "MSC CANBERRA II",
+      "muelle": "12 BAHIA NORTE",
+      "carga": "19",
+      "descripcionCarga": "CONTENEDORES CONVENCIONAL",
+      "fecha": "27/11/2026 15:20"
+    },
+    {
+      "buque": "SAAM HUASTECA",
+      "muelle": "16 BAHIA NORTE",
+      "carga": "15",
+      "descripcionCarga": "ABANDERAMIENTO",
+      "fecha": "08/10/2026 10:00"
+    },
+    {
+      "buque": "SAAM KANAN",
+      "muelle": "16 BAHIA NORTE",
+      "carga": "15",
+      "descripcionCarga": "ABANDERAMIENTO",
+      "fecha": "21/09/2026 9:55"
+    },
+    {
+      "buque": "MSC PARIS",
+      "muelle": "14 BAHIA NORTE",
+      "carga": "20",
+      "descripcionCarga": "CONTENEDORES ESPECIALIZADA",
+      "fecha": "27/11/2026 13:23"
+    },
+    {
+      "buque": "PACIFIC WEALTH",
+      "muelle": "9 NORTE",
+      "carga": "9",
+      "descripcionCarga": "GRANEL MINERAL",
+      "fecha": "20/11/2026 21:19"
+    },
+    {
+      "buque": "STRATEGIC SPIRI",
+      "muelle": "17 BAHIA NORTE",
+      "carga": "9",
+      "descripcionCarga": "GRANEL MINERAL",
+      "fecha": "22/11/2026 18:35"
     }
   ]
 }
