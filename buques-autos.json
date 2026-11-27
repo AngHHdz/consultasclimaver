@@ -1,20 +1,39 @@
 {
-  "fuente": "https://www.mediport.com.mx/mediportV2/Reportes/BuquesAtracados.aspx",
-  "consultado": "2026-11-27T15:47:10.641Z",
-  "actualizado": "2026-11-27T15:47:10.641Z",
+  "fuente": "https://www.mediport.com.mx/tableroOperativo/TablerosPublicos/atracados.aspx",
+  "endpoint": "https://www.mediport.com.mx/tableroOperativo/Tableros/buquesAtracados.aspx/consultaBuquesAtracados",
+  "consultado": "2026-11-27T17:14:47.153Z",
+  "actualizado": "2026-11-27T17:14:47.153Z",
   "disponible": true,
-  "total": 1,
+  "total": 2,
+  "totalBuquesAtracados": 29,
   "buques": [
     {
       "viaje": "261590",
-      "buque": "GOODWOOD",
+      "buque": "GOODWOOD ( Reg.1727)",
       "muelle": "1 N",
       "agencia": "ROVESA",
       "fecha": "26/11/2026 16:03",
       "maniobrista": "CICE/CICE",
       "descripcionCarga": "AUTOMOVILES",
-      "imo": "9701140",
-      "mmsi": "636016606"
+      "eta": "23/11/2026 16:00",
+      "etf": "28/11/2026 14:00",
+      "eslora": "199.97",
+      "calado": "8.5",
+      "imo": "9701140"
+    },
+    {
+      "viaje": "261686",
+      "buque": "TOLEDO ( Reg.1739)",
+      "muelle": "6 N",
+      "agencia": "TRANSMARINE",
+      "fecha": "27/11/2026 10:07",
+      "maniobrista": "CICE/CICE",
+      "descripcionCarga": "AUTOMOVILES",
+      "eta": "26/11/2026 12:00",
+      "etf": "26/11/2026 20:00",
+      "eslora": "199.99",
+      "calado": "9",
+      "imo": "9293624"
     }
   ]
 }
