@@ -31,7 +31,7 @@ async function fetchRecords() {
       if (!response.ok) throw new Error("MEDI-PORT HTTP " + response.status);
       const payload = await response.json();
       const records = payload?.d?.datos;
-      if (Number(payload?.d?.estado) !== 1 || !Array.isArray(records) || records.length === 0)
+      if (Number(payload?.d?.estado) !== 1 || !Array.isArray(records))
         throw new Error(payload?.d?.mensaje || "Respuesta de MEDI-PORT sin registros válidos.");
       return records;
     } catch (error) {
