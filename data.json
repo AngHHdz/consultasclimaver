@@ -1,8 +1,8 @@
 {
   "fuente": "Open-Meteo",
   "fuenteUrl": "https://open-meteo.com/",
-  "actualizado": "2026-11-27T22:11:34.035Z",
-  "consultado": "2026-11-27T22:11:34.035Z",
+  "actualizado": "2026-11-27T22:25:37.732Z",
+  "consultado": "2026-11-27T22:25:37.732Z",
   "ubicacion": "Veracruz, Veracruz, México",
   "coordenadas": {
     "latitud": 19.2,
@@ -11,19 +11,19 @@
   "zonaHoraria": "America/Mexico_City",
   "unidades": "°C · km/h · mm",
   "actual": {
-    "hora": "16:00",
-    "observacion": "2026-11-27T16:00",
+    "hora": "16:15",
+    "observacion": "2026-11-27T16:15",
     "condicion": "Nublado",
     "temp": 21.5,
     "sensacion": 20.5,
     "humedad": 79,
-    "presion": 1018.7,
+    "presion": 1018.8,
     "viento": {
       "dir": "N",
-      "min": 25.2,
-      "max": 48.2
+      "min": 25.4,
+      "max": 49
     },
-    "rachas": 48.2,
+    "rachas": 49,
     "codigo": 3,
     "isDay": 1,
     "precipitacion": 0
@@ -4368,17 +4368,17 @@
     "restante": null
   },
   "aire": {
-    "indice": 33,
+    "indice": 32,
     "nivel": "Aceptable",
     "escala": "European AQI",
-    "pm10": 9.4,
-    "pm25": 6.9,
-    "ozono": 86,
-    "dioxidoNitrogeno": 3.1
+    "pm10": 9.9,
+    "pm25": 7.2,
+    "ozono": 84,
+    "dioxidoNitrogeno": 4.5
   },
   "climaMes": null,
   "resumen": {
-    "hoy": "En Veracruz: nublado, 22°C; sensación térmica de 21°C. Viento N a 25 km/h, con rachas de 48 km/h."
+    "hoy": "En Veracruz: nublado, 22°C; sensación térmica de 21°C. Viento N a 25 km/h, con rachas de 49 km/h."
   },
   "luna": [],
   "ciudades": []
