@@ -184,6 +184,7 @@ try{
   for(const row of records){
     const bay=normBay(row.bahia);
     const movement={
+      folio:String(row.folio||""),
       fecha:String(row.fecha||"").split(" ")[0],
       hora:String(row.hora||""),
       evento:String(row.evento||"Movimiento"),
@@ -192,7 +193,7 @@ try{
     if(bay.includes("norte"))parsed.bahiaNorte.push(movement);
     else if(bay.includes("sur"))parsed.bahiaSur.push(movement);
   }
-  for(const key of ["bahiaNorte","bahiaSur"])parsed[key]=parsed[key].sort((a,b)=>parseMovementDate(b)-parseMovementDate(a)).slice(0,3);
+  for(const key of ["bahiaNorte","bahiaSur"])parsed[key]=parsed[key].sort((a,b)=>parseMovementDate(b)-parseMovementDate(a)||Number(b.folio||0)-Number(a.folio||0)).slice(0,10);
   bitacora={fuente:BITACORA_URL,actualizado:new Date().toISOString(),consultado:new Date().toISOString(),disponible:true,obsoleta:false,totalRegistros:records.length,...parsed};
   console.log("OK Mediport bitácora API: "+records.length+" registros; Norte "+parsed.bahiaNorte.length+", Sur "+parsed.bahiaSur.length+" movimientos recientes.");
 }catch(error){
