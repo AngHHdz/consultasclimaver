@@ -1,8 +1,8 @@
 {
   "fuente": "https://www.mediport.com.mx/tableroOperativo/TablerosPublicos/atracados.aspx",
   "endpoint": "https://www.mediport.com.mx/tableroOperativo/Tableros/buquesAtracados.aspx/consultaBuquesAtracados",
-  "consultado": "2026-11-27T22:47:55.255Z",
-  "actualizado": "2026-11-27T22:47:55.255Z",
+  "consultado": "2026-11-27T23:49:54.302Z",
+  "actualizado": "2026-11-27T23:49:54.302Z",
   "disponible": true,
   "total": 3,
   "totalBuquesAtracados": 32,
@@ -55,7 +55,6 @@
   ],
   "cargas": {
     "AUTOMOVILES": 3,
-    "CARGA GENERAL": 1,
     "ABANDERAMIENTO": 4,
     "GRANEL AGRICOLA CONVENCIONAL": 1,
     "GRANEL AGRICOLA ESPECIALIZADO": 4,
@@ -66,17 +65,11 @@
     "PRESTADOR DE SERVICIO DE REMOL": 3,
     "REMOLCADOR": 1,
     "CONTENEDORES CONVENCIONAL": 1,
+    "LIQUIDOS": 1,
     "CONTENEDORES ESPECIALIZADA": 1,
     "GRANEL MINERAL": 2
   },
   "otros": [
-    {
-      "buque": "SILVERFJORD",
-      "muelle": "2 N",
-      "carga": "14",
-      "descripcionCarga": "CARGA GENERAL",
-      "fecha": "26/11/2026 17:50"
-    },
     {
       "buque": "SAAM RARAMURI",
       "muelle": "4 E",
@@ -251,6 +244,13 @@
       "carga": "15",
       "descripcionCarga": "ABANDERAMIENTO",
       "fecha": "21/09/2026 9:55"
+    },
+    {
+      "buque": "BOW PERSISTENT",
+      "muelle": "16 BAHIA NORTE",
+      "carga": "13",
+      "descripcionCarga": "LIQUIDOS",
+      "fecha": "27/11/2026 16:21"
     },
     {
       "buque": "MSC PARIS",

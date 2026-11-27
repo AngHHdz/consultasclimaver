@@ -1,7 +1,7 @@
 {
   "fuente": "https://www.mediport.com.mx/tableroOperativo/TablerosPublicos/bitacoraBahiaPublica.aspx",
-  "actualizado": "2026-11-27T22:47:54.134Z",
-  "consultado": "2026-11-27T22:47:54.134Z",
+  "actualizado": "2026-11-27T23:49:51.906Z",
+  "consultado": "2026-11-27T23:49:51.906Z",
   "disponible": true,
   "obsoleta": false,
   "totalRegistros": 83,
@@ -152,7 +152,7 @@
   "calt": {
     "fuente": "https://calt.puertodeveracruz.com.mx/Calt/",
     "endpoint": "https://calt.puertodeveracruz.com.mx/Calt/Publico/EstadoTerminalesManiobras.aspx/obtieneEstadoApi",
-    "consultado": "2026-11-27T22:47:54.134Z",
+    "consultado": "2026-11-27T23:49:51.907Z",
     "disponible": true,
     "estados": {
       "north": {
