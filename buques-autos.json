@@ -1,11 +1,11 @@
 {
   "fuente": "https://www.mediport.com.mx/tableroOperativo/TablerosPublicos/atracados.aspx",
   "endpoint": "https://www.mediport.com.mx/tableroOperativo/Tableros/buquesAtracados.aspx/consultaBuquesAtracados",
-  "consultado": "2026-11-27T18:40:58.733Z",
-  "actualizado": "2026-11-27T18:40:58.733Z",
+  "consultado": "2026-11-27T22:11:35.499Z",
+  "actualizado": "2026-11-27T22:11:35.499Z",
   "disponible": true,
   "total": 2,
-  "totalBuquesAtracados": 29,
+  "totalBuquesAtracados": 31,
   "buques": [
     {
       "viaje": "261590",
