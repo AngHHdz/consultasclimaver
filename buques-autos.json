@@ -1,8 +1,8 @@
 {
   "fuente": "https://www.mediport.com.mx/tableroOperativo/TablerosPublicos/atracados.aspx",
   "endpoint": "https://www.mediport.com.mx/tableroOperativo/Tableros/buquesAtracados.aspx/consultaBuquesAtracados",
-  "consultado": "2026-11-28T04:10:26.413Z",
-  "actualizado": "2026-11-28T04:10:26.413Z",
+  "consultado": "2026-11-28T04:20:29.389Z",
+  "actualizado": "2026-11-28T04:20:29.389Z",
   "disponible": true,
   "total": 3,
   "totalBuquesAtracados": 35,
