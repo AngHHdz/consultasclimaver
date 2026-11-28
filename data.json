@@ -1,8 +1,8 @@
 {
   "fuente": "Open-Meteo",
   "fuenteUrl": "https://open-meteo.com/",
-  "actualizado": "2026-11-28T06:20:21.663Z",
-  "consultado": "2026-11-28T06:20:21.663Z",
+  "actualizado": "2026-11-28T06:30:23.659Z",
+  "consultado": "2026-11-28T06:30:23.659Z",
   "ubicacion": "Veracruz, Veracruz, México",
   "coordenadas": {
     "latitud": 19.2,
@@ -11,19 +11,19 @@
   "zonaHoraria": "America/Mexico_City",
   "unidades": "°C · km/h · mm",
   "actual": {
-    "hora": "00:15",
-    "observacion": "2026-11-28T00:15",
+    "hora": "00:30",
+    "observacion": "2026-11-28T00:30",
     "condicion": "Llovizna ligera",
-    "temp": 20.6,
-    "sensacion": 21.7,
+    "temp": 20.5,
+    "sensacion": 21.5,
     "humedad": 86,
-    "presion": 1020,
+    "presion": 1019.8,
     "viento": {
       "dir": "NO",
-      "min": 12.8,
-      "max": 23
+      "min": 12.9,
+      "max": 22.7
     },
-    "rachas": 23,
+    "rachas": 22.7,
     "codigo": 51,
     "isDay": 0,
     "precipitacion": 0.1
