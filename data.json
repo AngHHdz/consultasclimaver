@@ -1,8 +1,8 @@
 {
   "fuente": "Open-Meteo",
   "fuenteUrl": "https://open-meteo.com/",
-  "actualizado": "2026-11-28T03:40:20.814Z",
-  "consultado": "2026-11-28T03:40:20.815Z",
+  "actualizado": "2026-11-28T03:50:27.909Z",
+  "consultado": "2026-11-28T03:50:27.909Z",
   "ubicacion": "Veracruz, Veracruz, México",
   "coordenadas": {
     "latitud": 19.2,
@@ -11,19 +11,19 @@
   "zonaHoraria": "America/Mexico_City",
   "unidades": "°C · km/h · mm",
   "actual": {
-    "hora": "21:30",
-    "observacion": "2026-11-27T21:30",
+    "hora": "21:45",
+    "observacion": "2026-11-27T21:45",
     "condicion": "Llovizna ligera",
-    "temp": 21.7,
+    "temp": 21.5,
     "sensacion": 22.3,
-    "humedad": 80,
-    "presion": 1020.9,
+    "humedad": 81,
+    "presion": 1021,
     "viento": {
       "dir": "NNO",
-      "min": 15.5,
-      "max": 31.3
+      "min": 15.4,
+      "max": 29.9
     },
-    "rachas": 31.3,
+    "rachas": 29.9,
     "codigo": 51,
     "isDay": 0,
     "precipitacion": 0.1
@@ -4378,7 +4378,7 @@
   },
   "climaMes": null,
   "resumen": {
-    "hoy": "En Veracruz: llovizna ligera, 22°C; sensación térmica de 22°C. Viento NNO a 16 km/h, con rachas de 31 km/h."
+    "hoy": "En Veracruz: llovizna ligera, 22°C; sensación térmica de 22°C. Viento NNO a 15 km/h, con rachas de 30 km/h."
   },
   "luna": [],
   "ciudades": []
