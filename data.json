@@ -1,8 +1,8 @@
 {
   "fuente": "Open-Meteo",
   "fuenteUrl": "https://open-meteo.com/",
-  "actualizado": "2026-11-28T09:11:10.460Z",
-  "consultado": "2026-11-28T09:11:10.460Z",
+  "actualizado": "2026-11-28T09:20:20.645Z",
+  "consultado": "2026-11-28T09:20:20.645Z",
   "ubicacion": "Veracruz, Veracruz, México",
   "coordenadas": {
     "latitud": 19.2,
@@ -11,19 +11,19 @@
   "zonaHoraria": "America/Mexico_City",
   "unidades": "°C · km/h · mm",
   "actual": {
-    "hora": "03:00",
-    "observacion": "2026-11-28T03:00",
+    "hora": "03:15",
+    "observacion": "2026-11-28T03:15",
     "condicion": "Nublado",
     "temp": 20.5,
     "sensacion": 22.3,
-    "humedad": 83,
-    "presion": 1017.5,
+    "humedad": 84,
+    "presion": 1017.3,
     "viento": {
       "dir": "ONO",
-      "min": 6.7,
-      "max": 12.6
+      "min": 6.9,
+      "max": 12.2
     },
-    "rachas": 12.6,
+    "rachas": 12.2,
     "codigo": 3,
     "isDay": 0,
     "precipitacion": 0
@@ -36,7 +36,7 @@
       "probLluvia": 39,
       "lluviaMm": 0.4,
       "max": 26,
-      "min": 20.1,
+      "min": 20.5,
       "viento": {
         "dir": "N",
         "min": null,
@@ -72,7 +72,7 @@
       "probLluvia": 0,
       "lluviaMm": 0,
       "max": 24.7,
-      "min": 20.2,
+      "min": 20.6,
       "viento": {
         "dir": "N",
         "min": null,
@@ -108,7 +108,7 @@
       "probLluvia": 0,
       "lluviaMm": 0,
       "max": 27.2,
-      "min": 19.1,
+      "min": 18.8,
       "viento": {
         "dir": "SE",
         "min": null,
@@ -125,8 +125,8 @@
       "condicion": "Niebla",
       "probLluvia": 2,
       "lluviaMm": 0,
-      "max": 28.9,
-      "min": 21,
+      "max": 29.1,
+      "min": 21.3,
       "viento": {
         "dir": "SSE",
         "min": null,
@@ -143,8 +143,8 @@
       "condicion": "Niebla",
       "probLluvia": 2,
       "lluviaMm": 0,
-      "max": 28.6,
-      "min": 23,
+      "max": 27.9,
+      "min": 22.6,
       "viento": {
         "dir": "N",
         "min": null,
@@ -3021,7 +3021,7 @@
       "visibilidadKm": 24.5,
       "vientoMedio": 11.6,
       "rachas": 34.2,
-      "presion": 1013.7,
+      "presion": 1013.8,
       "uv": {
         "indice": 0.15
       },
@@ -3046,7 +3046,7 @@
       "visibilidadKm": 24.5,
       "vientoMedio": 10.6,
       "rachas": 30.2,
-      "presion": 1014.2,
+      "presion": 1014.3,
       "uv": {
         "indice": 0
       },
@@ -3071,7 +3071,7 @@
       "visibilidadKm": 24.5,
       "vientoMedio": 10,
       "rachas": 25.2,
-      "presion": 1014.8,
+      "presion": 1014.9,
       "uv": {
         "indice": 0
       },
@@ -3171,7 +3171,7 @@
       "visibilidadKm": 0.5,
       "vientoMedio": 9.8,
       "rachas": 16.9,
-      "presion": 1014.3,
+      "presion": 1014.2,
       "uv": {
         "indice": 0
       },
@@ -3196,7 +3196,7 @@
       "visibilidadKm": 0.4,
       "vientoMedio": 9.7,
       "rachas": 16.9,
-      "presion": 1013.8,
+      "presion": 1013.6,
       "uv": {
         "indice": 0
       },
@@ -3221,7 +3221,7 @@
       "visibilidadKm": 0.3,
       "vientoMedio": 8.4,
       "rachas": 17.6,
-      "presion": 1013.1,
+      "presion": 1012.9,
       "uv": {
         "indice": 0
       },
@@ -3246,7 +3246,7 @@
       "visibilidadKm": 0.2,
       "vientoMedio": 7.3,
       "rachas": 17.6,
-      "presion": 1012.7,
+      "presion": 1012.4,
       "uv": {
         "indice": 0
       },
@@ -3271,7 +3271,7 @@
       "visibilidadKm": 0.1,
       "vientoMedio": 6.8,
       "rachas": 16.2,
-      "presion": 1012.6,
+      "presion": 1012.3,
       "uv": {
         "indice": 0
       },
@@ -3296,7 +3296,7 @@
       "visibilidadKm": 0.1,
       "vientoMedio": 6.4,
       "rachas": 14.4,
-      "presion": 1012.7,
+      "presion": 1012.4,
       "uv": {
         "indice": 0
       },
@@ -3321,7 +3321,7 @@
       "visibilidadKm": 0.1,
       "vientoMedio": 6.1,
       "rachas": 13.3,
-      "presion": 1012.9,
+      "presion": 1012.7,
       "uv": {
         "indice": 0
       },
@@ -3346,7 +3346,7 @@
       "visibilidadKm": 3.4,
       "vientoMedio": 6.1,
       "rachas": 13.7,
-      "presion": 1013.5,
+      "presion": 1013.4,
       "uv": {
         "indice": 0
       },
@@ -3371,7 +3371,7 @@
       "visibilidadKm": 6.7,
       "vientoMedio": 6.2,
       "rachas": 14.8,
-      "presion": 1014.2,
+      "presion": 1014.4,
       "uv": {
         "indice": 0.75
       },
@@ -3396,7 +3396,7 @@
       "visibilidadKm": 9.9,
       "vientoMedio": 5.7,
       "rachas": 15.8,
-      "presion": 1014.6,
+      "presion": 1014.9,
       "uv": {
         "indice": 2.25
       },
@@ -3421,7 +3421,7 @@
       "visibilidadKm": 10.1,
       "vientoMedio": 4.8,
       "rachas": 16.9,
-      "presion": 1014.3,
+      "presion": 1014.6,
       "uv": {
         "indice": 3.85
       },
@@ -3446,7 +3446,7 @@
       "visibilidadKm": 10.3,
       "vientoMedio": 5.1,
       "rachas": 18,
-      "presion": 1013.7,
+      "presion": 1013.8,
       "uv": {
         "indice": 5.05
       },
@@ -3471,7 +3471,7 @@
       "visibilidadKm": 10.4,
       "vientoMedio": 6.8,
       "rachas": 20.2,
-      "presion": 1013.3,
+      "presion": 1012.9,
       "uv": {
         "indice": 5.75
       },
@@ -3496,7 +3496,7 @@
       "visibilidadKm": 13.3,
       "vientoMedio": 9.4,
       "rachas": 24.1,
-      "presion": 1012.5,
+      "presion": 1011.8,
       "uv": {
         "indice": 6.25
       },
@@ -3521,7 +3521,7 @@
       "visibilidadKm": 16.1,
       "vientoMedio": 12.5,
       "rachas": 28.8,
-      "presion": 1012.1,
+      "presion": 1010.6,
       "uv": {
         "indice": 5.65
       },
@@ -3546,7 +3546,7 @@
       "visibilidadKm": 18.9,
       "vientoMedio": 14.6,
       "rachas": 32.4,
-      "presion": 1011.8,
+      "presion": 1009.9,
       "uv": {
         "indice": 4.45
       },
@@ -3571,7 +3571,7 @@
       "visibilidadKm": 15.5,
       "vientoMedio": 10.8,
       "rachas": 29.9,
-      "presion": 1011.4,
+      "presion": 1011.5,
       "uv": {
         "indice": 2.8
       },
@@ -3721,7 +3721,7 @@
       "visibilidadKm": 3.1,
       "vientoMedio": 5.7,
       "rachas": 24.8,
-      "presion": 1012.6,
+      "presion": 1012.5,
       "uv": {
         "indice": 0
       },
@@ -3746,7 +3746,7 @@
       "visibilidadKm": 1.7,
       "vientoMedio": 6.5,
       "rachas": 22.3,
-      "presion": 1013,
+      "presion": 1012.9,
       "uv": {
         "indice": 0
       },
@@ -3796,7 +3796,7 @@
       "visibilidadKm": 0.3,
       "vientoMedio": 7.2,
       "rachas": 18.4,
-      "presion": 1013.2,
+      "presion": 1013.3,
       "uv": {
         "indice": 0
       },
@@ -3821,7 +3821,7 @@
       "visibilidadKm": 0.2,
       "vientoMedio": 7.2,
       "rachas": 16.6,
-      "presion": 1013.1,
+      "presion": 1013.2,
       "uv": {
         "indice": 0
       },
@@ -3846,7 +3846,7 @@
       "visibilidadKm": 0.2,
       "vientoMedio": 6.9,
       "rachas": 15.1,
-      "presion": 1013,
+      "presion": 1013.1,
       "uv": {
         "indice": 0
       },
@@ -3871,7 +3871,7 @@
       "visibilidadKm": 0.2,
       "vientoMedio": 6.5,
       "rachas": 14,
-      "presion": 1012.8,
+      "presion": 1012.9,
       "uv": {
         "indice": 0
       },
@@ -3896,7 +3896,7 @@
       "visibilidadKm": 0.2,
       "vientoMedio": 6.2,
       "rachas": 13.3,
-      "presion": 1012.7,
+      "presion": 1012.9,
       "uv": {
         "indice": 0
       },
@@ -3921,7 +3921,7 @@
       "visibilidadKm": 0.1,
       "vientoMedio": 5.8,
       "rachas": 13.7,
-      "presion": 1012.7,
+      "presion": 1013,
       "uv": {
         "indice": 0
       },
@@ -3946,7 +3946,7 @@
       "visibilidadKm": 2.2,
       "vientoMedio": 5,
       "rachas": 15.1,
-      "presion": 1012.9,
+      "presion": 1013.3,
       "uv": {
         "indice": 0
       },
@@ -3971,7 +3971,7 @@
       "visibilidadKm": 4.2,
       "vientoMedio": 4.8,
       "rachas": 17.6,
-      "presion": 1013.2,
+      "presion": 1013.8,
       "uv": {
         "indice": 0.7
       },
@@ -3996,7 +3996,7 @@
       "visibilidadKm": 6.2,
       "vientoMedio": 6.1,
       "rachas": 20.9,
-      "presion": 1013.5,
+      "presion": 1014.3,
       "uv": {
         "indice": 2.2
       },
@@ -4021,7 +4021,7 @@
       "visibilidadKm": 8.3,
       "vientoMedio": 8.5,
       "rachas": 24.1,
-      "presion": 1013.8,
+      "presion": 1014.8,
       "uv": {
         "indice": 3.85
       },
@@ -4046,7 +4046,7 @@
       "visibilidadKm": 10.3,
       "vientoMedio": 11,
       "rachas": 27.4,
-      "presion": 1014.1,
+      "presion": 1015.3,
       "uv": {
         "indice": 5.05
       },
@@ -4071,7 +4071,7 @@
       "visibilidadKm": 12.3,
       "vientoMedio": 12.8,
       "rachas": 29.9,
-      "presion": 1014.3,
+      "presion": 1015.6,
       "uv": {
         "indice": 5.75
       },
@@ -4096,7 +4096,7 @@
       "visibilidadKm": 13.7,
       "vientoMedio": 14.2,
       "rachas": 31.7,
-      "presion": 1014.3,
+      "presion": 1015.7,
       "uv": {
         "indice": 6.25
       },
@@ -4121,7 +4121,7 @@
       "visibilidadKm": 15.1,
       "vientoMedio": 15.2,
       "rachas": 33.5,
-      "presion": 1014.2,
+      "presion": 1015.7,
       "uv": {
         "indice": 5.65
       },
@@ -4146,7 +4146,7 @@
       "visibilidadKm": 16.5,
       "vientoMedio": 16.3,
       "rachas": 35.3,
-      "presion": 1014,
+      "presion": 1015.6,
       "uv": {
         "indice": 4.45
       },
@@ -4171,7 +4171,7 @@
       "visibilidadKm": 17.9,
       "vientoMedio": 17.5,
       "rachas": 36.4,
-      "presion": 1013.8,
+      "presion": 1015.5,
       "uv": {
         "indice": 2.8
       },
@@ -4196,7 +4196,7 @@
       "visibilidadKm": 19.3,
       "vientoMedio": 18.5,
       "rachas": 37.8,
-      "presion": 1013.8,
+      "presion": 1015.4,
       "uv": {
         "indice": 1.4
       },
@@ -4221,7 +4221,7 @@
       "visibilidadKm": 20.7,
       "vientoMedio": 19.5,
       "rachas": 38.5,
-      "presion": 1013.9,
+      "presion": 1015.6,
       "uv": {
         "indice": 0.2
       },
@@ -4246,7 +4246,7 @@
       "visibilidadKm": 21.2,
       "vientoMedio": 20.3,
       "rachas": 38.9,
-      "presion": 1014.3,
+      "presion": 1016,
       "uv": {
         "indice": 0
       },
@@ -4271,7 +4271,7 @@
       "visibilidadKm": 21.7,
       "vientoMedio": 20.9,
       "rachas": 39.2,
-      "presion": 1014.9,
+      "presion": 1016.6,
       "uv": {
         "indice": 0
       },
@@ -4296,7 +4296,7 @@
       "visibilidadKm": 22.2,
       "vientoMedio": 21.3,
       "rachas": 39.2,
-      "presion": 1015.6,
+      "presion": 1017.2,
       "uv": {
         "indice": 0
       },
@@ -4321,7 +4321,7 @@
       "visibilidadKm": 22.7,
       "vientoMedio": 21.5,
       "rachas": 38.9,
-      "presion": 1016.3,
+      "presion": 1017.9,
       "uv": {
         "indice": 0
       },
@@ -4346,7 +4346,7 @@
       "visibilidadKm": 23.2,
       "vientoMedio": 21.1,
       "rachas": 38.9,
-      "presion": 1016.9,
+      "presion": 1018.4,
       "uv": {
         "indice": 0
       },
@@ -4368,17 +4368,17 @@
     "restante": null
   },
   "aire": {
-    "indice": 33,
+    "indice": 31,
     "nivel": "Aceptable",
     "escala": "European AQI",
-    "pm10": 14.3,
-    "pm25": 11.3,
-    "ozono": 52,
-    "dioxidoNitrogeno": 10
+    "pm10": 13.2,
+    "pm25": 10.6,
+    "ozono": 49,
+    "dioxidoNitrogeno": 10.8
   },
   "climaMes": null,
   "resumen": {
-    "hoy": "En Veracruz: nublado, 21°C; sensación térmica de 22°C. Viento ONO a 7 km/h, con rachas de 13 km/h."
+    "hoy": "En Veracruz: nublado, 21°C; sensación térmica de 22°C. Viento ONO a 7 km/h, con rachas de 12 km/h."
   },
   "luna": [],
   "ciudades": []
