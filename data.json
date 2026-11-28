@@ -1,8 +1,8 @@
 {
   "fuente": "Open-Meteo",
   "fuenteUrl": "https://open-meteo.com/",
-  "actualizado": "2026-11-28T05:50:28.108Z",
-  "consultado": "2026-11-28T05:50:28.108Z",
+  "actualizado": "2026-11-28T06:00:21.540Z",
+  "consultado": "2026-11-28T06:00:21.541Z",
   "ubicacion": "Veracruz, Veracruz, México",
   "coordenadas": {
     "latitud": 19.2,
@@ -11,42 +11,24 @@
   "zonaHoraria": "America/Mexico_City",
   "unidades": "°C · km/h · mm",
   "actual": {
-    "hora": "23:45",
-    "observacion": "2026-11-27T23:45",
+    "hora": "00:00",
+    "observacion": "2026-11-28T00:00",
     "condicion": "Llovizna ligera",
-    "temp": 20.8,
-    "sensacion": 21.9,
+    "temp": 20.7,
+    "sensacion": 21.8,
     "humedad": 86,
-    "presion": 1020.3,
+    "presion": 1020.1,
     "viento": {
-      "dir": "NNO",
-      "min": 13,
-      "max": 24.1
+      "dir": "NO",
+      "min": 12.8,
+      "max": 23.4
     },
-    "rachas": 24.1,
+    "rachas": 23.4,
     "codigo": 51,
     "isDay": 0,
     "precipitacion": 0.1
   },
   "dias": [
-    {
-      "dia": "viernes",
-      "fecha": "2026-11-27",
-      "condicion": "Llovizna ligera",
-      "probLluvia": 11,
-      "lluviaMm": 0.6,
-      "max": 22.2,
-      "min": 19.3,
-      "viento": {
-        "dir": "NNO",
-        "min": null,
-        "max": 22.8
-      },
-      "rachas": 43.9,
-      "salida": "2026-11-27T06:39",
-      "puesta": "2026-11-27T17:45",
-      "uvMax": 4.3
-    },
     {
       "dia": "sábado",
       "fecha": "2026-11-28",
@@ -154,609 +136,27 @@
       "salida": "2026-12-03T06:43",
       "puesta": "2026-12-03T17:45",
       "uvMax": 6.25
+    },
+    {
+      "dia": "viernes",
+      "fecha": "2026-12-04",
+      "condicion": "Niebla",
+      "probLluvia": 2,
+      "lluviaMm": 0,
+      "max": 28.6,
+      "min": 23,
+      "viento": {
+        "dir": "N",
+        "min": null,
+        "max": 12.9
+      },
+      "rachas": 29.5,
+      "salida": "2026-12-04T06:43",
+      "puesta": "2026-12-04T17:46",
+      "uvMax": 6.25
     }
   ],
   "horas": [
-    {
-      "hora": "00:00",
-      "timestamp": "2026-11-27T00:00",
-      "condicion": "Nublado",
-      "temp": 20.7,
-      "sensacion": 19.6,
-      "probLluvia": 0,
-      "lluviaMm": 0,
-      "humedad": 68,
-      "puntoRocio": 14.5,
-      "nubosidad": 99,
-      "visibilidadKm": 35.5,
-      "vientoMedio": 17.7,
-      "rachas": 38.5,
-      "presion": 1022.6,
-      "uv": {
-        "indice": 0
-      },
-      "isDay": 0,
-      "viento": {
-        "dir": "NO",
-        "min": 17.7,
-        "max": 38.5
-      }
-    },
-    {
-      "hora": "01:00",
-      "timestamp": "2026-11-27T01:00",
-      "condicion": "Nublado",
-      "temp": 19.9,
-      "sensacion": 19.8,
-      "probLluvia": 0,
-      "lluviaMm": 0,
-      "humedad": 72,
-      "puntoRocio": 14.7,
-      "nubosidad": 86,
-      "visibilidadKm": 32,
-      "vientoMedio": 11.8,
-      "rachas": 31,
-      "presion": 1022.4,
-      "uv": {
-        "indice": 0
-      },
-      "isDay": 0,
-      "viento": {
-        "dir": "NO",
-        "min": 11.8,
-        "max": 31
-      }
-    },
-    {
-      "hora": "02:00",
-      "timestamp": "2026-11-27T02:00",
-      "condicion": "Nublado",
-      "temp": 19.4,
-      "sensacion": 20,
-      "probLluvia": 0,
-      "lluviaMm": 0,
-      "humedad": 77,
-      "puntoRocio": 15.3,
-      "nubosidad": 80,
-      "visibilidadKm": 32,
-      "vientoMedio": 8,
-      "rachas": 20.2,
-      "presion": 1021.9,
-      "uv": {
-        "indice": 0
-      },
-      "isDay": 0,
-      "viento": {
-        "dir": "ONO",
-        "min": 8,
-        "max": 20.2
-      }
-    },
-    {
-      "hora": "03:00",
-      "timestamp": "2026-11-27T03:00",
-      "condicion": "Nublado",
-      "temp": 19.3,
-      "sensacion": 20.3,
-      "probLluvia": 0,
-      "lluviaMm": 0,
-      "humedad": 80,
-      "puntoRocio": 15.7,
-      "nubosidad": 82,
-      "visibilidadKm": 32,
-      "vientoMedio": 6.5,
-      "rachas": 14,
-      "presion": 1021.2,
-      "uv": {
-        "indice": 0
-      },
-      "isDay": 0,
-      "viento": {
-        "dir": "ONO",
-        "min": 6.5,
-        "max": 14
-      }
-    },
-    {
-      "hora": "04:00",
-      "timestamp": "2026-11-27T04:00",
-      "condicion": "Nublado",
-      "temp": 19.6,
-      "sensacion": 20.4,
-      "probLluvia": 0,
-      "lluviaMm": 0,
-      "humedad": 79,
-      "puntoRocio": 15.8,
-      "nubosidad": 84,
-      "visibilidadKm": 32,
-      "vientoMedio": 7.9,
-      "rachas": 12.6,
-      "presion": 1021,
-      "uv": {
-        "indice": 0
-      },
-      "isDay": 0,
-      "viento": {
-        "dir": "NO",
-        "min": 7.9,
-        "max": 12.6
-      }
-    },
-    {
-      "hora": "05:00",
-      "timestamp": "2026-11-27T05:00",
-      "condicion": "Nublado",
-      "temp": 19.9,
-      "sensacion": 19.8,
-      "probLluvia": 0,
-      "lluviaMm": 0,
-      "humedad": 76,
-      "puntoRocio": 15.5,
-      "nubosidad": 97,
-      "visibilidadKm": 32,
-      "vientoMedio": 13.2,
-      "rachas": 22,
-      "presion": 1020.8,
-      "uv": {
-        "indice": 0
-      },
-      "isDay": 0,
-      "viento": {
-        "dir": "NNO",
-        "min": 13.2,
-        "max": 22
-      }
-    },
-    {
-      "hora": "06:00",
-      "timestamp": "2026-11-27T06:00",
-      "condicion": "Nublado",
-      "temp": 20.1,
-      "sensacion": 19.2,
-      "probLluvia": 0,
-      "lluviaMm": 0,
-      "humedad": 78,
-      "puntoRocio": 16.1,
-      "nubosidad": 97,
-      "visibilidadKm": 32,
-      "vientoMedio": 20,
-      "rachas": 30.2,
-      "presion": 1021.3,
-      "uv": {
-        "indice": 0
-      },
-      "isDay": 0,
-      "viento": {
-        "dir": "N",
-        "min": 20,
-        "max": 30.2
-      }
-    },
-    {
-      "hora": "07:00",
-      "timestamp": "2026-11-27T07:00",
-      "condicion": "Nubes y claros",
-      "temp": 20.3,
-      "sensacion": 19.3,
-      "probLluvia": 0,
-      "lluviaMm": 0,
-      "humedad": 77,
-      "puntoRocio": 16.1,
-      "nubosidad": 66,
-      "visibilidadKm": 32,
-      "vientoMedio": 20.9,
-      "rachas": 38.2,
-      "presion": 1021.7,
-      "uv": {
-        "indice": 0
-      },
-      "isDay": 1,
-      "viento": {
-        "dir": "NNO",
-        "min": 20.9,
-        "max": 38.2
-      }
-    },
-    {
-      "hora": "08:00",
-      "timestamp": "2026-11-27T08:00",
-      "condicion": "Nublado",
-      "temp": 20.7,
-      "sensacion": 19.4,
-      "probLluvia": 0,
-      "lluviaMm": 0,
-      "humedad": 74,
-      "puntoRocio": 15.9,
-      "nubosidad": 100,
-      "visibilidadKm": 32,
-      "vientoMedio": 22.8,
-      "rachas": 42.5,
-      "presion": 1022.4,
-      "uv": {
-        "indice": 0.25
-      },
-      "isDay": 1,
-      "viento": {
-        "dir": "NNO",
-        "min": 22.8,
-        "max": 42.5
-      }
-    },
-    {
-      "hora": "09:00",
-      "timestamp": "2026-11-27T09:00",
-      "condicion": "Nublado",
-      "temp": 21,
-      "sensacion": 20,
-      "probLluvia": 0,
-      "lluviaMm": 0,
-      "humedad": 72,
-      "puntoRocio": 15.7,
-      "nubosidad": 98,
-      "visibilidadKm": 18.8,
-      "vientoMedio": 20,
-      "rachas": 42.8,
-      "presion": 1022.9,
-      "uv": {
-        "indice": 1.1
-      },
-      "isDay": 1,
-      "viento": {
-        "dir": "NNO",
-        "min": 20,
-        "max": 42.8
-      }
-    },
-    {
-      "hora": "10:00",
-      "timestamp": "2026-11-27T10:00",
-      "condicion": "Nublado",
-      "temp": 21.2,
-      "sensacion": 20.3,
-      "probLluvia": 0,
-      "lluviaMm": 0,
-      "humedad": 72,
-      "puntoRocio": 15.9,
-      "nubosidad": 99,
-      "visibilidadKm": 32,
-      "vientoMedio": 20.3,
-      "rachas": 38.5,
-      "presion": 1023,
-      "uv": {
-        "indice": 1.75
-      },
-      "isDay": 1,
-      "viento": {
-        "dir": "NNO",
-        "min": 20.3,
-        "max": 38.5
-      }
-    },
-    {
-      "hora": "11:00",
-      "timestamp": "2026-11-27T11:00",
-      "condicion": "Nublado",
-      "temp": 21.4,
-      "sensacion": 20.4,
-      "probLluvia": 0,
-      "lluviaMm": 0,
-      "humedad": 72,
-      "puntoRocio": 16.2,
-      "nubosidad": 100,
-      "visibilidadKm": 31.9,
-      "vientoMedio": 21.7,
-      "rachas": 41.8,
-      "presion": 1022.4,
-      "uv": {
-        "indice": 1.8
-      },
-      "isDay": 1,
-      "viento": {
-        "dir": "N",
-        "min": 21.7,
-        "max": 41.8
-      }
-    },
-    {
-      "hora": "12:00",
-      "timestamp": "2026-11-27T12:00",
-      "condicion": "Nublado",
-      "temp": 21.9,
-      "sensacion": 21.5,
-      "probLluvia": 0,
-      "lluviaMm": 0,
-      "humedad": 71,
-      "puntoRocio": 16.3,
-      "nubosidad": 100,
-      "visibilidadKm": 35.5,
-      "vientoMedio": 18.3,
-      "rachas": 42.5,
-      "presion": 1021.9,
-      "uv": {
-        "indice": 2.75
-      },
-      "isDay": 1,
-      "viento": {
-        "dir": "NNO",
-        "min": 18.3,
-        "max": 42.5
-      }
-    },
-    {
-      "hora": "13:00",
-      "timestamp": "2026-11-27T13:00",
-      "condicion": "Nublado",
-      "temp": 22.1,
-      "sensacion": 21.4,
-      "probLluvia": 0,
-      "lluviaMm": 0,
-      "humedad": 72,
-      "puntoRocio": 16.8,
-      "nubosidad": 99,
-      "visibilidadKm": 31.9,
-      "vientoMedio": 21.1,
-      "rachas": 40.7,
-      "presion": 1020.5,
-      "uv": {
-        "indice": 2.7
-      },
-      "isDay": 1,
-      "viento": {
-        "dir": "N",
-        "min": 21.1,
-        "max": 40.7
-      }
-    },
-    {
-      "hora": "14:00",
-      "timestamp": "2026-11-27T14:00",
-      "condicion": "Nubes y claros",
-      "temp": 21.9,
-      "sensacion": 21.1,
-      "probLluvia": 0,
-      "lluviaMm": 0,
-      "humedad": 74,
-      "puntoRocio": 17.1,
-      "nubosidad": 69,
-      "visibilidadKm": 31.9,
-      "vientoMedio": 22.3,
-      "rachas": 43.9,
-      "presion": 1019.3,
-      "uv": {
-        "indice": 4.3
-      },
-      "isDay": 1,
-      "viento": {
-        "dir": "N",
-        "min": 22.3,
-        "max": 43.9
-      }
-    },
-    {
-      "hora": "15:00",
-      "timestamp": "2026-11-27T15:00",
-      "condicion": "Nublado",
-      "temp": 21.7,
-      "sensacion": 21.1,
-      "probLluvia": 0,
-      "lluviaMm": 0,
-      "humedad": 76,
-      "puntoRocio": 17.3,
-      "nubosidad": 100,
-      "visibilidadKm": 31.9,
-      "vientoMedio": 21.6,
-      "rachas": 43.9,
-      "presion": 1018.8,
-      "uv": {
-        "indice": 2.3
-      },
-      "isDay": 1,
-      "viento": {
-        "dir": "N",
-        "min": 21.6,
-        "max": 43.9
-      }
-    },
-    {
-      "hora": "16:00",
-      "timestamp": "2026-11-27T16:00",
-      "condicion": "Nublado",
-      "temp": 21.5,
-      "sensacion": 21,
-      "probLluvia": 0,
-      "lluviaMm": 0,
-      "humedad": 78,
-      "puntoRocio": 17.5,
-      "nubosidad": 83,
-      "visibilidadKm": 31.9,
-      "vientoMedio": 21.8,
-      "rachas": 42.5,
-      "presion": 1018.6,
-      "uv": {
-        "indice": 1.45
-      },
-      "isDay": 1,
-      "viento": {
-        "dir": "N",
-        "min": 21.8,
-        "max": 42.5
-      }
-    },
-    {
-      "hora": "17:00",
-      "timestamp": "2026-11-27T17:00",
-      "condicion": "Nublado",
-      "temp": 21.5,
-      "sensacion": 20.8,
-      "probLluvia": 0,
-      "lluviaMm": 0,
-      "humedad": 77,
-      "puntoRocio": 17.3,
-      "nubosidad": 84,
-      "visibilidadKm": 31.2,
-      "vientoMedio": 22.7,
-      "rachas": 43.2,
-      "presion": 1018.6,
-      "uv": {
-        "indice": 0.55
-      },
-      "isDay": 1,
-      "viento": {
-        "dir": "N",
-        "min": 22.7,
-        "max": 43.2
-      }
-    },
-    {
-      "hora": "18:00",
-      "timestamp": "2026-11-27T18:00",
-      "condicion": "Nublado",
-      "temp": 21.7,
-      "sensacion": 21,
-      "probLluvia": 0,
-      "lluviaMm": 0,
-      "humedad": 75,
-      "puntoRocio": 17.1,
-      "nubosidad": 100,
-      "visibilidadKm": 31.9,
-      "vientoMedio": 22,
-      "rachas": 42.5,
-      "presion": 1019,
-      "uv": {
-        "indice": 0.05
-      },
-      "isDay": 0,
-      "viento": {
-        "dir": "N",
-        "min": 22,
-        "max": 42.5
-      }
-    },
-    {
-      "hora": "19:00",
-      "timestamp": "2026-11-27T19:00",
-      "condicion": "Nublado",
-      "temp": 21.9,
-      "sensacion": 21.5,
-      "probLluvia": 0,
-      "lluviaMm": 0,
-      "humedad": 75,
-      "puntoRocio": 17.2,
-      "nubosidad": 100,
-      "visibilidadKm": 31.9,
-      "vientoMedio": 20.4,
-      "rachas": 40.3,
-      "presion": 1019.7,
-      "uv": {
-        "indice": 0
-      },
-      "isDay": 0,
-      "viento": {
-        "dir": "N",
-        "min": 20.4,
-        "max": 40.3
-      }
-    },
-    {
-      "hora": "20:00",
-      "timestamp": "2026-11-27T20:00",
-      "condicion": "Nublado",
-      "temp": 21.8,
-      "sensacion": 21.7,
-      "probLluvia": 1,
-      "lluviaMm": 0,
-      "humedad": 76,
-      "puntoRocio": 17.5,
-      "nubosidad": 98,
-      "visibilidadKm": 31.9,
-      "vientoMedio": 19.3,
-      "rachas": 37.1,
-      "presion": 1020.2,
-      "uv": {
-        "indice": 0
-      },
-      "isDay": 0,
-      "viento": {
-        "dir": "N",
-        "min": 19.3,
-        "max": 37.1
-      }
-    },
-    {
-      "hora": "21:00",
-      "timestamp": "2026-11-27T21:00",
-      "condicion": "Nublado",
-      "temp": 21.9,
-      "sensacion": 22.3,
-      "probLluvia": 2,
-      "lluviaMm": 0,
-      "humedad": 78,
-      "puntoRocio": 17.8,
-      "nubosidad": 100,
-      "visibilidadKm": 10.8,
-      "vientoMedio": 16,
-      "rachas": 34.6,
-      "presion": 1020.7,
-      "uv": {
-        "indice": 0
-      },
-      "isDay": 0,
-      "viento": {
-        "dir": "N",
-        "min": 16,
-        "max": 34.6
-      }
-    },
-    {
-      "hora": "22:00",
-      "timestamp": "2026-11-27T22:00",
-      "condicion": "Llovizna ligera",
-      "temp": 21.4,
-      "sensacion": 22.2,
-      "probLluvia": 6,
-      "lluviaMm": 0.2,
-      "humedad": 82,
-      "puntoRocio": 18.3,
-      "nubosidad": 100,
-      "visibilidadKm": 5.9,
-      "vientoMedio": 15.3,
-      "rachas": 28.4,
-      "presion": 1021,
-      "uv": {
-        "indice": 0
-      },
-      "isDay": 0,
-      "viento": {
-        "dir": "NNO",
-        "min": 15.3,
-        "max": 28.4
-      }
-    },
-    {
-      "hora": "23:00",
-      "timestamp": "2026-11-27T23:00",
-      "condicion": "Llovizna ligera",
-      "temp": 21.1,
-      "sensacion": 22.2,
-      "probLluvia": 11,
-      "lluviaMm": 0.4,
-      "humedad": 85,
-      "puntoRocio": 18.4,
-      "nubosidad": 100,
-      "visibilidadKm": 5.6,
-      "vientoMedio": 13.9,
-      "rachas": 26.6,
-      "presion": 1020.7,
-      "uv": {
-        "indice": 0
-      },
-      "isDay": 0,
-      "viento": {
-        "dir": "NNO",
-        "min": 13.9,
-        "max": 26.6
-      }
-    },
     {
       "hora": "00:00",
       "timestamp": "2026-11-28T00:00",
@@ -4356,6 +3756,606 @@
         "min": 5.5,
         "max": 19.8
       }
+    },
+    {
+      "hora": "00:00",
+      "timestamp": "2026-12-04T00:00",
+      "condicion": "Niebla",
+      "temp": 24.3,
+      "sensacion": 29.2,
+      "probLluvia": 2,
+      "lluviaMm": 0,
+      "humedad": 96,
+      "puntoRocio": 23.6,
+      "nubosidad": 34,
+      "visibilidadKm": 0.7,
+      "vientoMedio": 5.9,
+      "rachas": 17.6,
+      "presion": 1013.2,
+      "uv": {
+        "indice": 0
+      },
+      "isDay": 0,
+      "viento": {
+        "dir": "S",
+        "min": 5.9,
+        "max": 17.6
+      }
+    },
+    {
+      "hora": "01:00",
+      "timestamp": "2026-12-04T01:00",
+      "condicion": "Niebla",
+      "temp": 24,
+      "sensacion": 28.9,
+      "probLluvia": 2,
+      "lluviaMm": 0,
+      "humedad": 96,
+      "puntoRocio": 23.4,
+      "nubosidad": 45,
+      "visibilidadKm": 0.6,
+      "vientoMedio": 6.3,
+      "rachas": 16.6,
+      "presion": 1013.2,
+      "uv": {
+        "indice": 0
+      },
+      "isDay": 0,
+      "viento": {
+        "dir": "SSO",
+        "min": 6.3,
+        "max": 16.6
+      }
+    },
+    {
+      "hora": "02:00",
+      "timestamp": "2026-12-04T02:00",
+      "condicion": "Niebla",
+      "temp": 23.6,
+      "sensacion": 28.3,
+      "probLluvia": 2,
+      "lluviaMm": 0,
+      "humedad": 98,
+      "puntoRocio": 23.3,
+      "nubosidad": 60,
+      "visibilidadKm": 0.5,
+      "vientoMedio": 6.7,
+      "rachas": 15.8,
+      "presion": 1013.1,
+      "uv": {
+        "indice": 0
+      },
+      "isDay": 0,
+      "viento": {
+        "dir": "SSO",
+        "min": 6.7,
+        "max": 15.8
+      }
+    },
+    {
+      "hora": "03:00",
+      "timestamp": "2026-12-04T03:00",
+      "condicion": "Niebla",
+      "temp": 23.3,
+      "sensacion": 27.7,
+      "probLluvia": 2,
+      "lluviaMm": 0,
+      "humedad": 98,
+      "puntoRocio": 23,
+      "nubosidad": 75,
+      "visibilidadKm": 0.4,
+      "vientoMedio": 7.4,
+      "rachas": 15.5,
+      "presion": 1013,
+      "uv": {
+        "indice": 0
+      },
+      "isDay": 0,
+      "viento": {
+        "dir": "SO",
+        "min": 7.4,
+        "max": 15.5
+      }
+    },
+    {
+      "hora": "04:00",
+      "timestamp": "2026-12-04T04:00",
+      "condicion": "Niebla",
+      "temp": 23,
+      "sensacion": 27.2,
+      "probLluvia": 2,
+      "lluviaMm": 0,
+      "humedad": 99,
+      "puntoRocio": 22.8,
+      "nubosidad": 89,
+      "visibilidadKm": 0.3,
+      "vientoMedio": 7.8,
+      "rachas": 15.5,
+      "presion": 1012.8,
+      "uv": {
+        "indice": 0
+      },
+      "isDay": 0,
+      "viento": {
+        "dir": "SO",
+        "min": 7.8,
+        "max": 15.5
+      }
+    },
+    {
+      "hora": "05:00",
+      "timestamp": "2026-12-04T05:00",
+      "condicion": "Niebla",
+      "temp": 22.8,
+      "sensacion": 26.9,
+      "probLluvia": 2,
+      "lluviaMm": 0,
+      "humedad": 99,
+      "puntoRocio": 22.6,
+      "nubosidad": 98,
+      "visibilidadKm": 0.2,
+      "vientoMedio": 8.2,
+      "rachas": 15.5,
+      "presion": 1012.7,
+      "uv": {
+        "indice": 0
+      },
+      "isDay": 0,
+      "viento": {
+        "dir": "OSO",
+        "min": 8.2,
+        "max": 15.5
+      }
+    },
+    {
+      "hora": "06:00",
+      "timestamp": "2026-12-04T06:00",
+      "condicion": "Niebla",
+      "temp": 23,
+      "sensacion": 27.1,
+      "probLluvia": 2,
+      "lluviaMm": 0,
+      "humedad": 97,
+      "puntoRocio": 22.5,
+      "nubosidad": 100,
+      "visibilidadKm": 0.2,
+      "vientoMedio": 7.8,
+      "rachas": 15.8,
+      "presion": 1012.7,
+      "uv": {
+        "indice": 0
+      },
+      "isDay": 0,
+      "viento": {
+        "dir": "OSO",
+        "min": 7.8,
+        "max": 15.8
+      }
+    },
+    {
+      "hora": "07:00",
+      "timestamp": "2026-12-04T07:00",
+      "condicion": "Nublado",
+      "temp": 23.7,
+      "sensacion": 27.9,
+      "probLluvia": 2,
+      "lluviaMm": 0,
+      "humedad": 93,
+      "puntoRocio": 22.5,
+      "nubosidad": 92,
+      "visibilidadKm": 2.5,
+      "vientoMedio": 6.5,
+      "rachas": 16.6,
+      "presion": 1012.9,
+      "uv": {
+        "indice": 0
+      },
+      "isDay": 1,
+      "viento": {
+        "dir": "OSO",
+        "min": 6.5,
+        "max": 16.6
+      }
+    },
+    {
+      "hora": "08:00",
+      "timestamp": "2026-12-04T08:00",
+      "condicion": "Nubes y claros",
+      "temp": 24.7,
+      "sensacion": 29.3,
+      "probLluvia": 1,
+      "lluviaMm": 0,
+      "humedad": 88,
+      "puntoRocio": 22.6,
+      "nubosidad": 75,
+      "visibilidadKm": 4.8,
+      "vientoMedio": 4.3,
+      "rachas": 17.3,
+      "presion": 1013.2,
+      "uv": {
+        "indice": 0.7
+      },
+      "isDay": 1,
+      "viento": {
+        "dir": "SO",
+        "min": 4.3,
+        "max": 17.3
+      }
+    },
+    {
+      "hora": "09:00",
+      "timestamp": "2026-12-04T09:00",
+      "condicion": "Nubes y claros",
+      "temp": 25.9,
+      "sensacion": 30.8,
+      "probLluvia": 1,
+      "lluviaMm": 0,
+      "humedad": 83,
+      "puntoRocio": 22.7,
+      "nubosidad": 54,
+      "visibilidadKm": 7.1,
+      "vientoMedio": 2.7,
+      "rachas": 18.4,
+      "presion": 1013.5,
+      "uv": {
+        "indice": 2.2
+      },
+      "isDay": 1,
+      "viento": {
+        "dir": "S",
+        "min": 2.7,
+        "max": 18.4
+      }
+    },
+    {
+      "hora": "10:00",
+      "timestamp": "2026-12-04T10:00",
+      "condicion": "Principalmente despejado",
+      "temp": 27.1,
+      "sensacion": 31.9,
+      "probLluvia": 1,
+      "lluviaMm": 0,
+      "humedad": 77,
+      "puntoRocio": 22.8,
+      "nubosidad": 32,
+      "visibilidadKm": 9.4,
+      "vientoMedio": 3.9,
+      "rachas": 19.4,
+      "presion": 1013.8,
+      "uv": {
+        "indice": 3.85
+      },
+      "isDay": 1,
+      "viento": {
+        "dir": "SE",
+        "min": 3.9,
+        "max": 19.4
+      }
+    },
+    {
+      "hora": "11:00",
+      "timestamp": "2026-12-04T11:00",
+      "condicion": "Despejado",
+      "temp": 28,
+      "sensacion": 32.9,
+      "probLluvia": 0,
+      "lluviaMm": 0,
+      "humedad": 74,
+      "puntoRocio": 22.9,
+      "nubosidad": 14,
+      "visibilidadKm": 11.7,
+      "vientoMedio": 5.9,
+      "rachas": 20.9,
+      "presion": 1014.1,
+      "uv": {
+        "indice": 5.05
+      },
+      "isDay": 1,
+      "viento": {
+        "dir": "ESE",
+        "min": 5.9,
+        "max": 20.9
+      }
+    },
+    {
+      "hora": "12:00",
+      "timestamp": "2026-12-04T12:00",
+      "condicion": "Despejado",
+      "temp": 28.6,
+      "sensacion": 33.8,
+      "probLluvia": 0,
+      "lluviaMm": 0,
+      "humedad": 72,
+      "puntoRocio": 23.1,
+      "nubosidad": 2,
+      "visibilidadKm": 14,
+      "vientoMedio": 7.4,
+      "rachas": 22,
+      "presion": 1014.3,
+      "uv": {
+        "indice": 5.75
+      },
+      "isDay": 1,
+      "viento": {
+        "dir": "E",
+        "min": 7.4,
+        "max": 22
+      }
+    },
+    {
+      "hora": "13:00",
+      "timestamp": "2026-12-04T13:00",
+      "condicion": "Despejado",
+      "temp": 28.6,
+      "sensacion": 34,
+      "probLluvia": 0,
+      "lluviaMm": 0,
+      "humedad": 73,
+      "puntoRocio": 23.2,
+      "nubosidad": 0,
+      "visibilidadKm": 13.6,
+      "vientoMedio": 8,
+      "rachas": 23.4,
+      "presion": 1014.3,
+      "uv": {
+        "indice": 6.25
+      },
+      "isDay": 1,
+      "viento": {
+        "dir": "E",
+        "min": 8,
+        "max": 23.4
+      }
+    },
+    {
+      "hora": "14:00",
+      "timestamp": "2026-12-04T14:00",
+      "condicion": "Despejado",
+      "temp": 28.2,
+      "sensacion": 33.5,
+      "probLluvia": 0,
+      "lluviaMm": 0,
+      "humedad": 75,
+      "puntoRocio": 23.4,
+      "nubosidad": 0,
+      "visibilidadKm": 13.2,
+      "vientoMedio": 8.6,
+      "rachas": 24.8,
+      "presion": 1014.2,
+      "uv": {
+        "indice": 5.65
+      },
+      "isDay": 1,
+      "viento": {
+        "dir": "ENE",
+        "min": 8.6,
+        "max": 24.8
+      }
+    },
+    {
+      "hora": "15:00",
+      "timestamp": "2026-12-04T15:00",
+      "condicion": "Despejado",
+      "temp": 27.7,
+      "sensacion": 32.3,
+      "probLluvia": 0,
+      "lluviaMm": 0,
+      "humedad": 79,
+      "puntoRocio": 23.6,
+      "nubosidad": 2,
+      "visibilidadKm": 12.9,
+      "vientoMedio": 9.6,
+      "rachas": 26.6,
+      "presion": 1014,
+      "uv": {
+        "indice": 4.45
+      },
+      "isDay": 1,
+      "viento": {
+        "dir": "NE",
+        "min": 9.6,
+        "max": 26.6
+      }
+    },
+    {
+      "hora": "16:00",
+      "timestamp": "2026-12-04T16:00",
+      "condicion": "Despejado",
+      "temp": 27,
+      "sensacion": 31.4,
+      "probLluvia": 0,
+      "lluviaMm": 0,
+      "humedad": 83,
+      "puntoRocio": 23.8,
+      "nubosidad": 8,
+      "visibilidadKm": 12.5,
+      "vientoMedio": 10.8,
+      "rachas": 28.1,
+      "presion": 1013.8,
+      "uv": {
+        "indice": 2.8
+      },
+      "isDay": 1,
+      "viento": {
+        "dir": "NNE",
+        "min": 10.8,
+        "max": 28.1
+      }
+    },
+    {
+      "hora": "17:00",
+      "timestamp": "2026-12-04T17:00",
+      "condicion": "Despejado",
+      "temp": 26.4,
+      "sensacion": 30.7,
+      "probLluvia": 0,
+      "lluviaMm": 0,
+      "humedad": 87,
+      "puntoRocio": 24,
+      "nubosidad": 13,
+      "visibilidadKm": 12.1,
+      "vientoMedio": 12.2,
+      "rachas": 29.2,
+      "presion": 1013.8,
+      "uv": {
+        "indice": 1.4
+      },
+      "isDay": 1,
+      "viento": {
+        "dir": "NNE",
+        "min": 12.2,
+        "max": 29.2
+      }
+    },
+    {
+      "hora": "18:00",
+      "timestamp": "2026-12-04T18:00",
+      "condicion": "Despejado",
+      "temp": 25.9,
+      "sensacion": 30.2,
+      "probLluvia": 0,
+      "lluviaMm": 0,
+      "humedad": 90,
+      "puntoRocio": 24.1,
+      "nubosidad": 17,
+      "visibilidadKm": 11.7,
+      "vientoMedio": 12.9,
+      "rachas": 29.5,
+      "presion": 1013.9,
+      "uv": {
+        "indice": 0.2
+      },
+      "isDay": 0,
+      "viento": {
+        "dir": "NNE",
+        "min": 12.9,
+        "max": 29.5
+      }
+    },
+    {
+      "hora": "19:00",
+      "timestamp": "2026-12-04T19:00",
+      "condicion": "Principalmente despejado",
+      "temp": 25.7,
+      "sensacion": 30,
+      "probLluvia": 0,
+      "lluviaMm": 0,
+      "humedad": 91,
+      "puntoRocio": 24.2,
+      "nubosidad": 20,
+      "visibilidadKm": 12.4,
+      "vientoMedio": 12.8,
+      "rachas": 29.2,
+      "presion": 1014.3,
+      "uv": {
+        "indice": 0
+      },
+      "isDay": 0,
+      "viento": {
+        "dir": "N",
+        "min": 12.8,
+        "max": 29.2
+      }
+    },
+    {
+      "hora": "20:00",
+      "timestamp": "2026-12-04T20:00",
+      "condicion": "Principalmente despejado",
+      "temp": 25.5,
+      "sensacion": 30,
+      "probLluvia": 1,
+      "lluviaMm": 0,
+      "humedad": 93,
+      "puntoRocio": 24.2,
+      "nubosidad": 23,
+      "visibilidadKm": 13.2,
+      "vientoMedio": 11.7,
+      "rachas": 27.7,
+      "presion": 1014.9,
+      "uv": {
+        "indice": 0
+      },
+      "isDay": 0,
+      "viento": {
+        "dir": "N",
+        "min": 11.7,
+        "max": 27.7
+      }
+    },
+    {
+      "hora": "21:00",
+      "timestamp": "2026-12-04T21:00",
+      "condicion": "Principalmente despejado",
+      "temp": 25.3,
+      "sensacion": 30,
+      "probLluvia": 1,
+      "lluviaMm": 0,
+      "humedad": 94,
+      "puntoRocio": 24.2,
+      "nubosidad": 26,
+      "visibilidadKm": 13.9,
+      "vientoMedio": 10.7,
+      "rachas": 25.9,
+      "presion": 1015.6,
+      "uv": {
+        "indice": 0
+      },
+      "isDay": 0,
+      "viento": {
+        "dir": "NNO",
+        "min": 10.7,
+        "max": 25.9
+      }
+    },
+    {
+      "hora": "22:00",
+      "timestamp": "2026-12-04T22:00",
+      "condicion": "Principalmente despejado",
+      "temp": 25.2,
+      "sensacion": 30,
+      "probLluvia": 1,
+      "lluviaMm": 0,
+      "humedad": 94,
+      "puntoRocio": 24.2,
+      "nubosidad": 29,
+      "visibilidadKm": 14.6,
+      "vientoMedio": 10.1,
+      "rachas": 24.1,
+      "presion": 1016.3,
+      "uv": {
+        "indice": 0
+      },
+      "isDay": 0,
+      "viento": {
+        "dir": "NNO",
+        "min": 10.1,
+        "max": 24.1
+      }
+    },
+    {
+      "hora": "23:00",
+      "timestamp": "2026-12-04T23:00",
+      "condicion": "Principalmente despejado",
+      "temp": 25.1,
+      "sensacion": 29.8,
+      "probLluvia": 2,
+      "lluviaMm": 0,
+      "humedad": 94,
+      "puntoRocio": 24.1,
+      "nubosidad": 32,
+      "visibilidadKm": 15.3,
+      "vientoMedio": 10.2,
+      "rachas": 23.4,
+      "presion": 1016.9,
+      "uv": {
+        "indice": 0
+      },
+      "isDay": 0,
+      "viento": {
+        "dir": "NO",
+        "min": 10.2,
+        "max": 23.4
+      }
     }
   ],
   "sol": {
@@ -4378,7 +4378,7 @@
   },
   "climaMes": null,
   "resumen": {
-    "hoy": "En Veracruz: llovizna ligera, 21°C; sensación térmica de 22°C. Viento NNO a 13 km/h, con rachas de 24 km/h."
+    "hoy": "En Veracruz: llovizna ligera, 21°C; sensación térmica de 22°C. Viento NO a 13 km/h, con rachas de 23 km/h."
   },
   "luna": [],
   "ciudades": []
