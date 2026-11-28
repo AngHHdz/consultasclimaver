@@ -1,8 +1,8 @@
 {
   "fuente": "Open-Meteo",
   "fuenteUrl": "https://open-meteo.com/",
-  "actualizado": "2026-11-28T01:10:23.232Z",
-  "consultado": "2026-11-28T01:10:23.232Z",
+  "actualizado": "2026-11-28T01:20:21.414Z",
+  "consultado": "2026-11-28T01:20:21.414Z",
   "ubicacion": "Veracruz, Veracruz, México",
   "coordenadas": {
     "latitud": 19.2,
@@ -11,19 +11,19 @@
   "zonaHoraria": "America/Mexico_City",
   "unidades": "°C · km/h · mm",
   "actual": {
-    "hora": "19:00",
-    "observacion": "2026-11-27T19:00",
+    "hora": "19:15",
+    "observacion": "2026-11-27T19:15",
     "condicion": "Nublado",
     "temp": 21.9,
-    "sensacion": 21.5,
+    "sensacion": 21.6,
     "humedad": 75,
-    "presion": 1019.7,
+    "presion": 1019.8,
     "viento": {
       "dir": "N",
-      "min": 20.4,
-      "max": 40.3
+      "min": 20.2,
+      "max": 39.6
     },
-    "rachas": 40.3,
+    "rachas": 39.6,
     "codigo": 3,
     "isDay": 0,
     "precipitacion": 0
@@ -4368,13 +4368,13 @@
     "restante": null
   },
   "aire": {
-    "indice": 30,
+    "indice": 29,
     "nivel": "Aceptable",
     "escala": "European AQI",
-    "pm10": 11.6,
-    "pm25": 8.3,
-    "ozono": 80,
-    "dioxidoNitrogeno": 5.4
+    "pm10": 12.4,
+    "pm25": 8.9,
+    "ozono": 78,
+    "dioxidoNitrogeno": 4.9
   },
   "climaMes": null,
   "resumen": {
