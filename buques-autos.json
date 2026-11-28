@@ -1,11 +1,11 @@
 {
   "fuente": "https://www.mediport.com.mx/tableroOperativo/TablerosPublicos/atracados.aspx",
   "endpoint": "https://www.mediport.com.mx/tableroOperativo/Tableros/buquesAtracados.aspx/consultaBuquesAtracados",
-  "consultado": "2026-11-28T03:10:25.057Z",
-  "actualizado": "2026-11-28T03:10:25.057Z",
+  "consultado": "2026-11-28T03:20:23.036Z",
+  "actualizado": "2026-11-28T03:20:23.036Z",
   "disponible": true,
   "total": 3,
-  "totalBuquesAtracados": 36,
+  "totalBuquesAtracados": 35,
   "buques": [
     {
       "viaje": "261590",
@@ -61,7 +61,7 @@
     "REPARACION BUQUE": 4,
     "TRAE A LA BARCAZA": 1,
     "(sin descripción)": 4,
-    "COMBUSTIBLE (FLUIDO)": 3,
+    "COMBUSTIBLE (FLUIDO)": 2,
     "PRESTADOR DE SERVICIO DE REMOL": 3,
     "REMOLCADOR": 1,
     "CONTENEDORES CONVENCIONAL": 2,
@@ -209,13 +209,6 @@
       "carga": "6",
       "descripcionCarga": "",
       "fecha": "06/10/2026 7:34"
-    },
-    {
-      "buque": "STI ST CHARLES",
-      "muelle": "PEMEX PTE",
-      "carga": "35",
-      "descripcionCarga": "COMBUSTIBLE (FLUIDO)",
-      "fecha": "27/11/2026 12:39"
     },
     {
       "buque": "LOCH CRINAN",
